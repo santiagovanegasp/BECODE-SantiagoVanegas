@@ -50,3 +50,28 @@ const message = "    TASTE THE RAINBOW!  "; //DON'T CHANGE THIS LINE PLEASE!
 let whisper = message.trim().toLowerCase();
 console.log(whisper);
 
+let string = 'Dumbledore';
+
+console.log(string.slice(-1));
+
+// DON'T TOUCH THIS LINE! (please)
+const word = "skateboard"; //Don't change this line!
+
+/*I've provided you with a word variable, set to "skateboard". Your goal is to use string methods on word, so that you end up with the string beard.
+
+Use a string method to extract the "board" part of "skateboard" (using the slice method)
+
+Replace the "o" in board with an "e" (using the replace method)
+
+Save the result in a variable called facialHair and then log it in the console.*/
+
+// YOUR CODE BELOW THIS LINE:
+
+let facialHair = word.slice(5).replace("o","e");
+console.log(facialHair)
+
+console.log(Math.round(Math.random()*10)); //random integer between 0 and 10
+
+console.log((Math.random()*5)); //random float between 1 and 5
+
+
