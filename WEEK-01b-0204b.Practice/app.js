@@ -166,13 +166,83 @@ console.log(typeof !b && "Hello" && c); // true
 // // ternary operator
 // age2 >= 18 ? console.log("you can vote") : console.log("Sorry , you can't vote")
 
-//  11b Exercise : Conditionals
-// Ok... Let's practice !
+ /*11b Exercise : Conditionals
 
-// You will write a little program that, when the user enters the browser, it prompts some questions about the user.
+let UserName = prompt("Write your name ");
+let FavoritePet = prompt(" which do you prefer, cats or dogs ? ") ;
 
-// name
-// which do you prefer, cats or dogs ?
-// Then, the browser should greet the user and make a comment about cats if he prefers cats or dogs if he prefers dogs.
+if (FavoritePet === "cats") {
+    alert(`Hello ${UserName} , i love cats too`)
+} else if (FavoritePet === "dogs"){
+    alert(`Hello ${UserName} , i love dogs too`)
+} else {
+    alert(`Hello ${UserName} ,  we only love dogs and cats , sorry!`)
+}
+    */
+
+// const mystery = "Panama7"; //CHANGE THIS VALUE TO MAKE THE CONDITIONAL BELOW TRUE
+
+// // LEAVE THIS CODE ALONE! (pretty please)
+// if (mystery[0] === "P" && mystery.length > 5 && mystery.indexOf("7") !== -1) {
+//   console.log("YOU GOT IT!!!");
+// } else {
+//   console.log("TRY AGAIN");
+// }
+
+/*Make a keyless car!
+
+
+let ageUser = parseInt(prompt('write your age')); 
+
+if (ageUser < 18 ){
+    console.log("Sorry, you are too young to drive this car. Powering off");
+    } else if (ageUser == 18 ) {
+    console.log("Congratulations on your first year of driving. Enjoy the ride!");
+    } else {
+    console.log("Powering On. Enjoy the ride!");
+} */
+
+
+// What fruit?
+
+// Ask the user what is his favorite fruit.
+// If it's bananas, tell him you like bananas as well.
+// If it's strawberry, tell him you LOVE strawberries.
+// If it's grape, aks him if he prefers purple or green grapes.
+// If it's purple, tell him you don't like purple grapes.
+// If it's green, tell him green grapes are ok...
+// If it's not purple or green, tell him you don't understand.
+// If it's another thing, tell him you don't understand the word he said (displaying the word he said).
+// Think like a programmer !
+
+// DRY !!!!! (Don't Repeat Yourself).
+// What if the person puts Bananas instead of bananas ?
+// Try to think the more efficient way to get to your goal.
+
+
+let favoriteFruit = prompt("Write your favorite fruit").toLowerCase();
+
+switch (favoriteFruit) {
+    case "bananas" : alert("I like bananas as well") ;
+    break;
+    case "strawberry" : alert("I  LOVE strawberries");
+    break;
+    case "grape" :  
+        let grapeFavorite = prompt("do you prefer purple/green grapes?").toLocaleLowerCase();
+        if (grapeFavorite =="purple"){
+            alert("I don't like purple grapes.")
+        } else if (grapeFavorite =="green"){
+            alert("Green apples are ok")
+        } else {
+            alert("I don't understand")
+        }
+    break;
+    default : alert(`I don't understand the word you said ${favoriteFruit}`)
+
+
+}  
+
+
+
 
 
