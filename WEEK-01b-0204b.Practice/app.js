@@ -43,7 +43,7 @@ Without altering the original value stored in message, please define a variable 
 Bonus: Make it in one line !  */
 
 // DON'T TOUCH THIS LINE!
-const message = "    TASTE THE RAINBOW!  "; //DON'T CHANGE THIS LINE PLEASE!
+/*const message = "    TASTE THE RAINBOW!  "; //DON'T CHANGE THIS LINE PLEASE!
 
 // YOUR CODE BELOW THIS LINE:
 
@@ -66,12 +66,78 @@ Replace the "o" in board with an "e" (using the replace method)
 Save the result in a variable called facialHair and then log it in the console.*/
 
 // YOUR CODE BELOW THIS LINE:
-
+/*
 let facialHair = word.slice(5).replace("o","e");
 console.log(facialHair)
 
 console.log(Math.round(Math.random()*10)); //random integer between 0 and 10
 
 console.log((Math.random()*5)); //random float between 1 and 5
+
+
+let numx = 3.6456448;
+console.log(typeof numx);
+
+
+const PI = 3.141596254;
+let num = PI.toFixed(4);
+num = PI.toPrecision(5);
+let mill = 1000000;
+num = mill.toExponential(); 
+console.log(num);
+
+
+
+/* 08 practice  Practice : Variables, Strings and Numbers */
+
+/*
+const city = "Brussels";
+
+let weatherCondition = "rainy";
+
+let temperature = 24.16879;
+
+const weatherText = `The weather in ${city} is ${weatherCondition} and it's ${parseInt(
+  temperature
+)}°C outside`;
+
+console.log(weatherText); // Prints : The weather in Brussels is rainy and it's 24°C outside.
+
+const name = prompt("What is your name?");
+const age = prompt("how old are you?");
+const adresse = prompt("where do you live?");
+
+
+alert(`Welcome ${name}!, you are ${age} and you live in ${adresse}` );
+
+*/
+// exercise VAT 
+/*
+let price = prompt('how much it cost ?');
+price *=1.21; 
+price.toFixed(2);
+//let priceVAT = price*1.21;
+console.log(price);
+alert(`the price with VAT is ${price}`)
+*/
+// exercise Surface of a circle 
+/* 
+let radius = prompt('what is the radius of your circle ?');
+radius= parseFloat(radius).toFixed(2);
+let surface = 3.14 * radius ;
+alert(`your circle surface is ${surface.toFixed(2)}`);
+*/
+
+/*Make a Calculator! using prompt(), and variables, make a program that does the following:
+
+Prompts the user for first number.
+Stores that first number
+Prompts the user for the second number.
+stores that number and responds with the SUM by using an alert.*/
+
+let number1= parseFloat(prompt('write a number'))
+let number2 = parseFloat(prompt('write a second number'));
+alert(`The SUM of your numbers is ${number1+number2}`);
+
 
 
