@@ -128,16 +128,51 @@ let surface = 3.14 * radius ;
 alert(`your circle surface is ${surface.toFixed(2)}`);
 */
 
-/*Make a Calculator! using prompt(), and variables, make a program that does the following:
-
-Prompts the user for first number.
-Stores that first number
-Prompts the user for the second number.
-stores that number and responds with the SUM by using an alert.*/
-
+/*Make a Calculator! 
 let number1= parseFloat(prompt('write a number'))
 let number2 = parseFloat(prompt('write a second number'));
 alert(`The SUM of your numbers is ${number1+number2}`);
+*/
+/*
+// QUESTION 1
+console.log(!0 && true); // true
 
+// QUESTION 2
+const a = null;
+const b = undefined;
+const c = 4;
+
+console.log((!a && b) || c); //true 
+
+// QUESTION 3
+
+console.log(a == b && c); // true 
+
+// QUESTION 4
+
+console.log(typeof !b && "Hello" && c); // true 
+
+*/
+
+// let age = 18;
+// let age2= 16;  
+
+// if (age >= 18){
+//     console.log("you can vote")
+// } else {
+//     console.log("Sorry , you can't vote")
+// }
+
+// // ternary operator
+// age2 >= 18 ? console.log("you can vote") : console.log("Sorry , you can't vote")
+
+//  11b Exercise : Conditionals
+// Ok... Let's practice !
+
+// You will write a little program that, when the user enters the browser, it prompts some questions about the user.
+
+// name
+// which do you prefer, cats or dogs ?
+// Then, the browser should greet the user and make a comment about cats if he prefers cats or dogs if he prefers dogs.
 
 
