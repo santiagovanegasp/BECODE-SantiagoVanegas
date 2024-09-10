@@ -26,6 +26,8 @@ b is 3
 
 Copy the bellow code into your javascript file and tun it in the browser.*/
 
+//const { prompt } = require("readline-sync");
+
 
 // ---------------   task from video 
 /*
@@ -541,10 +543,7 @@ The prompt function always return a string. Even if you put a number. Make sure 
 We can not use a comparator with NaN. There is a function to check if it's NaN : isNaN(). But remember : NaN is falsy, so there are better ways.*/
 
 
-
-
-
-
+/*
 let maxNumber ;
 do {
     maxNumber= parseInt(prompt("Write a max number"));
@@ -557,6 +556,7 @@ do {
 let randonNumber = parseInt(Math.random()* maxNumber+1) ;
 //console.log(maxNumber); 
 //console.log(randonNumber +"random number");
+
 
 let guessNumber ;
 let count=1;
@@ -581,5 +581,53 @@ do {
   
 } while (isNaN(guessNumber) || guessNumber != randonNumber);
 
-console.log(`guess number ${guessNumber} vs randonNumber ${randonNumber}`)
+console.log(`guess number ${guessNumber} vs randonNumber ${randonNumber}`)   */ 
+
+
+
+// Exercise 20    - ToDo List
+
+/* List commands 
+new to add a todo
+list to see all the todos
+delete to remove a specific todo
+quit to exit de program */ 
+
+//let todoList= ["java", "phyton", "react"]
+
+let todoList= []
+
+while (true) {
+
+let command = prompt("write a command *NEW* to add a todo , *LIST* to see all the todos , *DELETE* to remove a specific todo, *QUIT* to exit") ;
+ command= command.toLocaleLowerCase();
+ 
+if ( command === "new"){
+  todo = prompt("write your todo")
+  todoList.push(todo) 
+  
+ } else if (command === "list") {
+  //console.log(`${todoList.indexOf(todo)+1} .${todoList}`)
+   for ( let listN of todoList ){
+   console.log(`${todoList.indexOf(listN)+1} .${listN}`)
    
+   }
+ } else if (command == "delete"){
+  let elementDelete= prompt("write the element number that you want to delete")
+  //let index = todoList.indexOf(elementDelete) 
+  todoList.splice(elementDelete , 1 );
+  console.log(todoList)
+
+ }
+else if (command === "quit"){
+  break;
+ } 
+
+}
+
+// // ********* TODO LIST *********
+// 1. Walk out the dog
+// 2. Drink some milk
+// 3. Learn JavaScript
+// 4. Make exercises
+// etc...
