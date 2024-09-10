@@ -220,29 +220,366 @@ if (ageUser < 18 ){
 // Try to think the more efficient way to get to your goal.
 
 
-let favoriteFruit = prompt("Write your favorite fruit").toLowerCase();
+// let favoriteFruit = prompt("Write your favorite fruit").toLowerCase();
 
-switch (favoriteFruit) {
-    case "bananas" : alert("I like bananas as well") ;
-    break;
-    case "strawberry" : alert("I  LOVE strawberries");
-    break;
-    case "grape" :  
-        let grapeFavorite = prompt("do you prefer purple/green grapes?").toLocaleLowerCase();
-        if (grapeFavorite =="purple"){
-            alert("I don't like purple grapes.")
-        } else if (grapeFavorite =="green"){
-            alert("Green apples are ok")
-        } else {
-            alert("I don't understand")
-        }
-    break;
-    default : alert(`I don't understand the word you said ${favoriteFruit}`)
-
-
-}  
+// switch (favoriteFruit) {
+//     case "bananas" : alert("I like bananas as well") ;
+//     break;
+//     case "strawberry" : alert("I  LOVE strawberries");
+//     break;
+//     case "grape" :  
+//         let grapeFavorite = prompt("do you prefer purple/green grapes?").toLocaleLowerCase();
+//         if (grapeFavorite =="purple"){
+//             alert("I don't like purple grapes.")
+//         } else if (grapeFavorite =="green"){
+//             alert("Green apples are ok")
+//         } else {
+//             alert("I don't understand")
+//         }
+//     break;
+//     default : alert(`I don't understand the word you said ${favoriteFruit}`)
 
 
+// }  
+
+
+// arrays !! 
+/*
+let countries = ["spain", "belgium" , "netherlands",["colombia","argentina","peru"]];
+
+console.log(countries[3][0]);
+
+delete countries[3][1];
+console.log(countries[3][1]);
+
+countries[3][0] = "colombia 3" ;
+countries [3][1]= "argentina 1" ;
+
+console.log("el partido queda " + countries[3][0] + " "+ countries[3][1]);    */ 
+
+/*
+let fruits = ["apple", "orange" , "banana"] ;
+
+fruits.splice(0 , 0 , "cherry" , "pineapple"); // coulde be .unshift()
+
+fruits.push("plum","grapes");
+fruits.sort();
+console.log(fruits);  */ 
 
 
 
+/* //  12b.exercises Array access practice
+
+const leaderboard = ["Harry", "Lua", "Hermione", "Bellatrix"]; //DON'T TOUCH THIS LINE!
+
+// YOUR CODE BELOW HERE:
+
+leaderboard.splice(1, 1, "Luna");
+leaderboard.splice(3, 1, "Draco");
+
+console.log(leaderboard)
+*/
+
+
+
+/*//   Selection of elements Create an array that should look like suche : ["one","two","three"]
+const initialArray = [
+    null,
+    true,
+    ["Apple", "two", undefined],
+    false,
+    ["three", "BeCode"],
+    4,
+    "I am a big bad wolf",
+    ["one"],
+  ];
+
+  console.log(initialArray);
+
+
+
+initialArray.splice(0,2);
+
+console.log(initialArray);
+
+initialArray[0].shift();
+initialArray[0].pop();
+initialArray.splice(1,1);
+initialArray[1].pop();
+initialArray.splice(2,2);
+let finalArray = initialArray.join();
+
+//initialArray[0].splice(0,1);
+// console.log(initialArray);
+// initialArray[0].shift();
+console.log(finalArray);  */ 
+
+
+
+
+/*//Push/Pop/Shift/Unshift Practice
+
+
+
+const planets = ["The Moon", "Venus", "Earth", "Mars", "Jupiter"]; //DO NOT TOUCH THIS LINE!
+
+// YOUR CODE GOES BELOW THIS LINE:
+
+/*emove the first element, The Moon, from the planets array. The moon is not a planet!
+
+Add in Saturn at the very end of the planets array
+
+Add Mercury as the first element in the planets array.
+
+At the end of your hard work, planets should look like this: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn"]
+
+planets.shift();
+planets.push("Saturn");
+planets.unshift("Mercury");
+
+console.log(planets);  */
+
+
+// !  Objects 
+
+/* It's time to practice creating your own object literal. Please define a new variable called product. It should be an object literal with the following properties:
+
+name - set to the string "iPhone 15"
+
+inStock - set to the boolean true
+
+price - set to the number 1249.90
+
+includedInPackage - set to an array of at least three strings like ["case", "earphones", "charger"]
+
+Now, log to the console the second item included in the package that this iPhone product comes with. */ 
+
+/*
+const product = {
+    name : "iphone15" ,
+    inStock : true ,
+    price : 1249.00 ,
+    includedInPackage: ["case", "earphones", "charger"]
+
+};
+
+console.log(product.includedInPackage[1] + "*");
+*/
+
+/* Object Access Exercise
+
+Your task to is to create a variable named fullAddress that points to a string using the information from restaurant.
+
+fullAddress should point to a string that includes the address, city, state, and zipcode from the restaurant object. Make sure to add any necessary commas or spaces between the values as seen in the exact expected output format shown below.
+
+To make it harder to "cheat" by copy and pasting, I've randomly generated the address portion.
+
+For example, if address was "64 Johnson Ave", the fullAddress variable would look like this:
+"64 Johnson Ave, Brooklyn, NY 11206" // this is the expected output format of the fullAddress string (keep an eye on the commas and/or spaces between the values and match that too!)
+
+Finally, log to the console the value of fullAdress  */ 
+
+//PLEASE DON'T TOUCH THIS LINE!
+/*const restaurant = {
+    name: "Ichiran Ramen",
+    address: `${Math.floor(Math.random() * 100) + 1} Johnson Ave`,
+    city: "Brooklyn",
+    state: "NY",
+    zipcode: "11206",
+  };
+  
+  //YOUR CODE GOES DOWN HERE:
+
+  console.log(restaurant.address+",",restaurant.city +",",restaurant.state +",", restaurant.zipcode );  */
+
+
+
+ /* Even numbers
+Let's try another thing... Write a code that will log to the console only the even numbers untill 20.
+
+The goal here is to see that the increment expression doesn't have to be necessarely i++
+
+Attention : the 0 should no be counted.
+
+The result in your console should be :
+
+2 4 6 8 10 12 14 16 18 20 
+
+Now, do the same thing for odd numbers untille 20.
+
+The result in your console should be :
+
+1 3 5 7 9 11 13 15 17 19  */ 
+
+/*
+// odd numbers 
+for ( let i = 1 ; i <=20 ; i+=2)  {
+    console.log(i)
+}
+
+// even numbers
+
+for ( let i = 2 ; i <=20 ; i+=2)  {
+    console.log(i)
+} */
+
+    /* Decrement
+Let's inverse a little bit the logic.
+
+Let's print all the multiple of 10 from 100 to 1;
+
+The result in your console should be :
+
+100 90 80 70 60 50 40 30 20 10
+
+And now do another one that should print :
+
+25 20 15 10 5 0
+
+Another one
+Let's do something else... How could I have this result on my console :
+
+10 100 1000 */ 
+/*
+for ( let i = 100 ; i >=10 ; i-=10)  {
+    console.log(i)
+}
+
+
+for ( let i = 25 ; i >=0; i-=5)  {
+    console.log(i)
+}
+
+for ( let i = 10 ; i <=1000; i*=10)  {
+    console.log(i)
+}  */ 
+
+
+
+///
+
+
+// 16 for loops
+
+// const animals = ["lion", "pangolim", "zebra", "dog", "cat", "bird"];
+
+// //console.log(animals)
+// for ( let i= 5 ; i >= 0 ; i-- ){
+//     console.log(animals[i])
+// }
+
+/*
+
+const users = [
+    {
+      firstName: "Vito",
+      lastName: "Corleone",
+    },
+    {
+      firstName: "William",
+      lastName: "Wallace",
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+    },
+    {
+      firstName: "Amadeus",
+      lastName: "Mozart",
+    },
+    {
+      firstName: "Barack",
+      lastName: "Obama",
+    },
+  ];
+
+  for ( let i=0 ; i < users.length ; i++){
+
+    console.log("My full name is " + users[i].firstName +" " + users[i].lastName )
+  }
+
+  */
+
+
+  // 16 for loops
+
+  /*const seatingChart = [
+    ["Colas", "Benoit", "Elodie"], // row1
+    ["Sola", "Irina", "Antonino", "Eli"], // row2 
+    ["John", "Maryna", "Naike", "Fabrice"], // row3
+  ];
+  
+  // I can use nested loops to do that :
+  
+  for (let i = 0; i < seatingChart.length; i++) {
+    const row = seatingChart[i]; // I created a variable "row" just to be cleaner in the declaration of the next loop. You could put seatingChart[i].length, it would be the same thing
+    console.log(`ROW # ${i+1}`)
+    for (let j = 0; j < row.length; j++) {
+        
+        console.log(row[j]);
+    }
+  }  */
+
+  // as an exercise, try to log the number of the row before the list of students.
+    
+
+
+// 18.exercise  Javascript Loop Exercise
+
+/*Ok, let's write a little stupid game. :) Read all the instructions before starting to code.
+
+The machine should ask the user to enter a "max number".
+Get sure the max number is indeed a number. Otherwise it should ask again tha max number.
+The machine should then choose a random number between 1 and the max number.
+Then, the machine will ask the user to guess the number
+If we enter something that is not a number, the machine should alert it's not a valid answer and ask again for a number.
+If it's not correct, the machine should tell it's not correct and if the guess should be higher or lower.
+The loop ends only when the user finds the number and then the machine says "Congratulation!" and how many attemps the user made before it guessed right.
+Little tip :
+
+The prompt function always return a string. Even if you put a number. Make sure you compare numbers to numbers ;)
+We can not use a comparator with NaN. There is a function to check if it's NaN : isNaN(). But remember : NaN is falsy, so there are better ways.*/
+
+
+
+
+
+
+let maxNumber ;
+do {
+    maxNumber= parseInt(prompt("Write a max number"));
+    if (isNaN(maxNumber)){
+      alert("it's not a valid answer");
+    }
+    
+} while (isNaN(maxNumber));
+
+let randonNumber = parseInt(Math.random()* maxNumber+1) ;
+//console.log(maxNumber); 
+//console.log(randonNumber +"random number");
+
+let guessNumber ;
+let count=1;
+do {
+  guessNumber = parseInt(prompt("Guess the number i chossed"));
+  if (isNaN(guessNumber)){
+    alert("it's not a valid answer");
+  }
+  
+  if (guessNumber > randonNumber ){
+    alert(" try again with a lower number")
+    count++
+  } 
+  if (guessNumber < randonNumber ){
+    alert(" try again with a higher number")
+    count++
+  }
+
+  if (guessNumber === randonNumber ) {
+    alert(`Congratulations! you got the secret number you have done ${count} attemps `)
+  } 
+  
+} while (isNaN(guessNumber) || guessNumber != randonNumber);
+
+console.log(`guess number ${guessNumber} vs randonNumber ${randonNumber}`)
+   
