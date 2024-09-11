@@ -770,7 +770,7 @@ function sumArray (myArray){
 sumArray([10,25,56,89,90]);
 
 */
-
+/*
 function returnDay (dayOfweek){
 
   const myObject = {
@@ -791,8 +791,23 @@ function returnDay (dayOfweek){
   }
 
 }
-console.log (returnDay(2));
+console.log (returnDay(2)); */
 
 
 
+// Here, the callTwice function takes another function as a parameter and call it n times
 
+
+const rollDie = function () {
+  const roll = Math.floor(Math.random() * 6 + 1);
+  console.log(roll);
+};
+
+function callTwice(func, times) {
+  for (let i = 0; i < times; i++) {
+    func();  
+  }
+}
+
+
+callTwice(rollDie, 5);  
