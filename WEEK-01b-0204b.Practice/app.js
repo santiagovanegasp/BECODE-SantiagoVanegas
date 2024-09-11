@@ -595,6 +595,7 @@ quit to exit de program */
 
 //let todoList= ["java", "phyton", "react"]
 
+/*
 let todoList= []
 
 while (true) {
@@ -623,11 +624,175 @@ else if (command === "quit"){
   break;
  } 
 
+}*/
+
+// exercises functions
+
+// function favFood (response) {
+//   if (response === undefined){
+//     console.log("please write your favorite food")
+//   }else {
+//     console.log(`Your favorite food is ${response}`)
+//   }
+  
+// }
+
+// favFood();
+
+
+// function favNum(num){
+//   return num;
+// }
+
+// let myFavNum = favNum(8);
+// console.log(`My fav num is ${myFavNum}`)
+
+
+// 21b.Exercises  dies
+
+
+
+// Write a function that takes two parameters faces and times
+// Inside of it, log to the console times times a die with faces faces.
+// Console log : die 1 : result, die 2 : result for each die.
+// Expected result for, for example, (6, 5) (the numbers should be random of course)
+
+ /*
+function die (faces, times){
+
+  let arrayDieNumbers =[];
+  for ( let i = 0 ;i <times ; i++ ){
+    dieNumber =  Math.floor(Math.random() * faces + 1)
+    arrayDieNumbers.push(dieNumber)  // to save the number
+    
+  }
+  
+  for ( let i =0 ; i < times ; i++){
+    console.log(`die ${i+1}: ${arrayDieNumbers[i]}`)
+  } 
+   
 }
 
-// // ********* TODO LIST *********
-// 1. Walk out the dog
-// 2. Drink some milk
-// 3. Learn JavaScript
-// 4. Make exercises
-// etc...
+die(13,25)  */ 
+
+
+
+// Let's write a function that takes as parameter a string and the amount of times we want to repeat it. Then, log to the console the result.
+
+// Example:
+// repeat("$", 5);
+// // expected result : "$$$$$"
+
+/*
+function repeat (string , times ) {
+
+  let text = "";
+
+    for (let i = 0 ; i < times ; i++ ){
+
+      text += string;
+     
+    }
+  
+    console.log(text)  
+}
+
+repeat("5" , 5 )  */
+/*
+function sum (num1,num2){
+  return parseInt(num1) + parseInt(num2) ;
+
+}
+
+const result = sum(3,"6");
+console.log(result)
+console.log(typeof(result));  */
+
+
+// function logs() {
+//   console.log("Hello");
+//   console.log("World");
+//   return 4;
+//   console.log("Goodbye");
+//   console.log("World");
+// }
+
+// const myVariable = logs();
+
+// console.log(myVariable);
+
+/*
+function isShortWeather (temperature){
+
+  if ( temperature >= 24 ) {
+    return true ; 
+  } else {
+    return false; 
+  }
+} 
+
+console.log (isShortWeather(20));  */
+
+
+// last element array 
+/*
+function lastElement (MyArray){
+
+  return MyArray[MyArray.length - 1];
+}
+
+console.log(lastElement([3,5,6,7])); */
+
+/*
+function capitalize (str){
+  // let firstLetter = str.charAt(0)  ;//returns f 
+  // let otherLetters = str.substring(1) 
+  // let cap = firstLetter.toUpperCase();
+  
+  let shortCap = str.charAt(0).toUpperCase()+ str.substring(1)
+  //return console.log(`${cap}${otherLetters}`);
+  return console.log(`${shortCap}`)
+}
+
+capitalize("mirapashabobo")  */ 
+
+
+/*
+function sumArray (myArray){
+  let sum = 0 ; 
+  for ( let i = 0 ; i < myArray.length ; i++){
+    sum += myArray[i]; 
+
+  }
+  console.log(sum);
+}
+
+sumArray([10,25,56,89,90]);
+
+*/
+
+function returnDay (dayOfweek){
+
+  const myObject = {
+    1: "monday",
+    2: "tuesday",
+    3: "wednesday",
+    4: "thursday",
+    5: "friday",
+    6: "saturday",
+    7: "sunday",
+  };
+
+  if ( dayOfweek > 0 && dayOfweek < 8 ){
+
+    return myObject[dayOfweek];
+  } else {
+    return null;
+  }
+
+}
+console.log (returnDay(2));
+
+
+
+
