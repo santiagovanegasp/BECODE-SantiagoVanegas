@@ -836,6 +836,69 @@ const user = {
 }; 
 user.aYearHasPast();
 console.log(user.printAge())    */ 
+//arrow functions 
+// const user = name => `My name is ${name}`;
+// console.log(user("santi"))
+
+// const greeting = () =>" hello, how are you ? "
+// console.log(greeting())
+
+/*
+let book= {
+  title: " The fellowship of the ring",
+  related: ["The two towers", "The return of the king"],
+  showRelated : function  ()  {
+    this.related.forEach((relatedBooks) => {
+      console.log(`Title : ${this.title}`);
+      console.log (`Realated books: ${relatedBooks}`);
+    });
+  },
+}
+
+book.showRelated() */
+
+// try {
+//   console.log(hello);
+// } catch {
+//   console.log("The above code didn't work");
+// }
+
+// console.log("End of program");
+
+
+const myObject = {
+  firstName: "William",
+  lastName: "Wallace",
+  age: 37,
+  profession: "warrior",
+};
+
+
+// const lastName = myObject.lastName;
+// const age = myObject.age;
+
+const { firstName, lastName, age, profession } = myObject;
+
+// Then :
+
+// console.log(firstName);
+// console.log(lastName);
+// console.log(age);
+// console.log(profession);
 
 
 
+
+// setTimeout(() => {
+//   console.log("I've been logged 2 seconds after the first log");
+// }, 10000);
+
+
+// const timer = setInterval(() => {
+//   console.log("hello");
+// }, 2000);
+// clearInterval(timer);
+
+const d = new Date();
+d.toISOString();
+console.log(d)
