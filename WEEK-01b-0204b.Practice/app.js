@@ -797,7 +797,7 @@ console.log (returnDay(2)); */
 
 // Here, the callTwice function takes another function as a parameter and call it n times
 
-
+/*
 const rollDie = function () {
   const roll = Math.floor(Math.random() * 6 + 1);
   console.log(roll);
@@ -810,4 +810,32 @@ function callTwice(func, times) {
 }
 
 
-callTwice(rollDie, 5);  
+callTwice(rollDie, 5);    */ 
+
+
+// 24.Methods  
+
+
+/*
+const user = {
+  firstName: "vito" ,
+  lastName: "corleone",
+  age: "55",
+  printAge: function (){
+    return `${this.firstName} ${this.lastName} is ${this.age} years old`;
+  },
+  test: function (){
+    return "hello"
+  },
+  aYearHasPast: function (){
+    return this.age = parseInt(this.age) + 1 ;
+  },
+  test: function (){
+    return "hello"
+  }, 
+}; 
+user.aYearHasPast();
+console.log(user.printAge())    */ 
+
+
+
