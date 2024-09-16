@@ -191,5 +191,40 @@ console.log(possibleBonux(1, 9) )
 console.log(possibleBonux(5, 3) ) */
 
 
+// 02. exo Create a function that will return an integer number corresponding to the amount of digits in the given integer num.
+
+/*
+function countNumbers (num){
+  let convert = num.toString().split("");
+
+  return convert.length ;
+}
+
+console.log(countNumbers(12)) */
+
+//  03 . exo convert an object into an array 
+
+/*
+  const toArray =   (userArray) =>  Object.entries(userArray);   // object.entries return an array of arrays take key and value 
+  console.log(toArray({ shrimp: 15, tots: 12 }));*/
+
+//   toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+
+// toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots", 12]]
+
+// toArray({}) ➞ []
 
 
+// 04. exo // Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length. 
+
+
+
+
+function arrayOfMultiples(num, Maxlength){
+    let resultArray = [] ; /// [...]
+    for ( let i = 1 ; i <=  Maxlength ; i++) {
+         resultArray.push(num * i);
+    }
+    return resultArray;
+    }   
+console.log(arrayOfMultiples(12,10))
