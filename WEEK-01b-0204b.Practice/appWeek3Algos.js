@@ -131,6 +131,9 @@ function fps(minutes , frames) {
 
 console.log(fps(10,25))*/
 
+
+// exo 01.09  fuel 
+/*
 function calculateFuel( distancia){
     let result = distancia*10 ;
     if (result < 100){
@@ -143,5 +146,50 @@ console.log(calculateFuel(15))
 
 console.log(calculateFuel(23.5) )
 
-console.log(calculateFuel(3) )
+console.log(calculateFuel(3) )*/
+
+//   ALGOS SERIE 2  // 
+
+//.00exo 
+
+// Create a function which returns the number of true values there are in an array.
+
+// Notes
+// Return 0 if given an empty array.
+// All array items are of the type bool (true or false).
+/*
+function trueValues (myArray){
+
+    const count = myArray.filter(value => value === true).length;
+    console.log(count);
+}
+
+
+
+trueValues([false, false, false, true]);  */ 
+
+// countTrue([false, false, false, false]) ➞ 0
+
+// countTrue([]) ➞ 0
+
+// 0.1 Exo 
+/*
+function possibleBonus (myPosition, friendPosition){
+  if (friendPosition - myPosition <=6 && friendPosition - myPosition > 0 ){
+    return true ; 
+  } else  {return false ;}
+  
+}
+
+const possibleBonux = (myPosition, friendPosition) => friendPosition - myPosition <=6 && friendPosition - myPosition > 0 ;
+
+
+
+console.log(possibleBonux(3, 7))
+
+console.log(possibleBonux(1, 9) )
+console.log(possibleBonux(5, 3) ) */
+
+
+
 
