@@ -219,7 +219,7 @@ console.log(countNumbers(12)) */
 
 
 
-
+/*
 function arrayOfMultiples(num, Maxlength){
     let resultArray = [] ; /// [...]
     for ( let i = 1 ; i <=  Maxlength ; i++) {
@@ -227,4 +227,87 @@ function arrayOfMultiples(num, Maxlength){
     }
     return resultArray;
     }   
-console.log(arrayOfMultiples(12,10))
+consol
+}e.log(arrayOfMultiples(12,10)) */ 
+
+
+
+// console.log(prueba)
+
+
+////
+
+// test = "000000046546456000154554455"
+// console.log(test.indexOf("."))
+
+
+// 05 exo Exercise removeLeadingTrailing zeros
+
+// let  test = "00030402.0603445506690000"; 
+// test = parseFloat(prueba)
+
+console.log(removeLeadingTrailing("003.1400"));
+
+
+function removeLeadingTrailing(UserNum){
+        let nonDec = UserNum.indexOf(".");
+        console.log(nonDec)
+        let resultNum;
+    if (nonDec == -1){
+        startI = 0;
+        resultNum = 0; // ***
+        while ( startI < UserNum.length && UserNum[startI]=== '0'){
+            startI++;
+        } if (startI === UserNum.length){
+            resultNum = '0';
+        } else{
+            resultNum = UserNum.substring(startI);
+        }  
+
+    } else {
+    
+    let UserNumParts = UserNum.split(".")
+    console.log(UserNumParts)
+    group1 = UserNumParts[0];
+    group2 = UserNumParts[1];
+    let startIndex = 0;
+    
+
+    while (startIndex < group1.length && group1[startIndex] === '0') {
+        startIndex++;
+    } 
+
+    let firstNum = 0;  /// **** 
+
+    if (startIndex === group1.length) {
+        firstNum = '0';
+    } else {
+        firstNum = group1.substring(startIndex);
+    } console.log(firstNum) // ok
+    //// second group while rigth to left
+
+    let endIndex = group2.length -1;
+
+    while (endIndex >= 0 && group2[endIndex] === '0') {
+    endIndex--;
+    } console.log(endIndex);
+    let secondNum;
+    if (endIndex < 0) {
+        secondNum = ''; // if only zeros , replace by ""
+    } else {
+        secondNum = group2.substring(0, endIndex + 1); // decimal number without zeros
+    }
+
+    // only integer number
+    if (secondNum === '') {
+        resultNum = firstNum;
+    } else {
+        resultNum = `${firstNum}.${secondNum}`;
+    }
+}
+
+//console.log(resultNum); test 
+return resultNum; 
+}
+
+    
