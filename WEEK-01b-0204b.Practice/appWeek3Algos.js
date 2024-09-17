@@ -246,6 +246,9 @@ consol
 // let  test = "00030402.0603445506690000"; 
 // test = parseFloat(prueba)
 
+
+
+/*
 console.log(removeLeadingTrailing("003.1400"));
 
 
@@ -309,5 +312,71 @@ function removeLeadingTrailing(UserNum){
 //console.log(resultNum); test 
 return resultNum; 
 }
+*/
 
+
+
+/*
+sortIt([4, 1, 3]) ➞ [1, 3, 4]
+
+sortIt([[4], [1], [3]]) ➞ [[1], [3], [4]]
+
+sortIt([4, [1], 3]) ➞ [[1], 3, 4]
+
+sortIt([[4], 1, [3]]) ➞ [1, [3], [4]]
+
+sortIt([[3], 4, [2], [5], 1, 6]) ➞ [1, [2], [3], 4, [5], 6]  */ 
     
+
+
+// let organize = [[3], 4, [2], [5], 1, 6];
+
+
+// for ( let i =0 ; i < organize.length ; i++){
+
+//     let result = [];
+
+//    if (organize[i] <  organize[i++] )  {
+//     organize[i].push(result);
+//     console.log(result);
+//    }
+// }
+
+
+let organize = [[3], 4, [2], [5], 1, 6, 8];
+
+
+
+let numericList= []; 
+for ( let i =0 ; i < organize.length ; i++){
+    
+    numericList.push(Number(organize[i].toString()))
+}
+console.log(numericList)
+
+   
+let changes ; 
+    do {
+
+        changes= false; 
+
+        for ( let i =0 ; i < numericList.length -1   ; i++){
+
+            let a = numericList[i];
+            let b = numericList[i+1];
+           if ( a > b) {    
+              numericList [i] = b ;
+              numericList [i+1] = a;  
+              changes = true ; 
+           } 
+        
+         } 
+
+    } while (changes)
+
+
+   
+console.log(numericList)
+
+/// first step 
+ 
