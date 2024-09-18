@@ -500,4 +500,52 @@ console.log(rvs("the sky is blue"))*/
 
 
 
+/// ------------- ALGOS SERIE  03 --------------- ////
 
+// 00.exo 
+
+//  paso 1 sumar todos los numeros entresi 
+
+// paso 2 verificar si la sumas es par o impar
+
+// paso 3 devolver y concatenar 
+
+
+let test = ["5","6","7"];
+
+
+console.log(test.map(Number))
+
+
+
+function suma (num){
+
+    let stringNum = num
+    .toString()
+    .split("")
+    .map(Number)
+    console.log(stringNum)
+    let newNum = stringNum.reduce((accumulator, currentValue) => accumulator + currentValue);
+    return newNum % 2 === 0 ? "Evenish" : "Oddish";
+  
+    // if ( newNum % 2 === 0 ){
+    //     return "Evenish"
+    // } else {
+    //     return "Oddish"
+    // }
+
+}
+
+console.log(suma("4433"))
+
+// oddishOrEvenish(43) ➞ "Oddish"
+// // 4 + 3 = 7
+// // 7 % 2 = 1
+
+// oddishOrEvenish(373) ➞ "Oddish"
+// // 3 + 7 + 3 = 13
+// // 13 % 2 = 1
+
+// oddishOrEvenish(4433) ➞ "Evenish"
+// // 4 + 4 + 3 + 3 = 14
+// 14 % 2 = 0 -
