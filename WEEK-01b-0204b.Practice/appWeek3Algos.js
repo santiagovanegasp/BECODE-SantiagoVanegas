@@ -195,7 +195,7 @@ console.log(possibleBonux(5, 3) ) */
 
 /*
 function countNumbers (num){
-  let convert = num.toString().split("");
+  let convert = num.tostringing().split("");
 
   return convert.length ;
 }
@@ -264,7 +264,7 @@ function removeLeadingTrailing(UserNum){
         } if (startI === UserNum.length){
             resultNum = '0';
         } else{
-            resultNum = UserNum.substring(startI);
+            resultNum = UserNum.substringing(startI);
         }  
 
     } else {
@@ -285,7 +285,7 @@ function removeLeadingTrailing(UserNum){
     if (startIndex === group1.length) {
         firstNum = '0';
     } else {
-        firstNum = group1.substring(startIndex);
+        firstNum = group1.substringing(startIndex);
     } console.log(firstNum) // ok
     //// second group while rigth to left
 
@@ -298,7 +298,7 @@ function removeLeadingTrailing(UserNum){
     if (endIndex < 0) {
         secondNum = ''; // if only zeros , replace by ""
     } else {
-        secondNum = group2.substring(0, endIndex + 1); // decimal number without zeros
+        secondNum = group2.substringing(0, endIndex + 1); // decimal number without zeros
     }
 
     // only integer number
@@ -343,40 +343,161 @@ sortIt([[3], 4, [2], [5], 1, 6]) ➞ [1, [2], [3], 4, [5], 6]  */
 // }
 
 
-let organize = [[3], 4, [2], [5], 1, 6, 8];
 
+ 
+// serie 2 exo 06 Exercise. 
 
+/*
+function sortIt (userArray){
 
-let numericList= []; 
-for ( let i =0 ; i < organize.length ; i++){
-    
-    numericList.push(Number(organize[i].toString()))
+    userArray.sort((a, b) => a - b);
+    return userArray;
 }
-console.log(numericList)
+
+console.log(sortIt([[3], 4, [2], [5], 1, 6])) */ 
+
+
+
+
+// long way >> without methods
+// let organize = [[3], 4, [2], [5], 1, 6];
+// let numericList= []; 
+// for ( let i =0 ; i < organize.length ; i++){
+    
+//     numericList.push(Number(organize[i].tostringing()))
+// }
+// console.log(numericList)
 
    
-let changes ; 
-    do {
+// let changes ; 
+//     do {
 
-        changes= false; 
+//         changes= false; 
 
-        for ( let i =0 ; i < numericList.length -1   ; i++){
+//         for ( let i =0 ; i < numericList.length -1   ; i++){
 
-            let a = numericList[i];
-            let b = numericList[i+1];
-           if ( a > b) {    
-              numericList [i] = b ;
-              numericList [i+1] = a;  
-              changes = true ; 
-           } 
+//             let a = numericList[i];
+//             let b = numericList[i+1];
+//            if ( a > b) {    
+//               numericList [i] = b ;
+//               numericList [i+1] = a;  
+//               changes = true ; 
+//            } 
         
-         } 
+//          } 
 
-    } while (changes)
+//     } while (changes)
 
 
    
-console.log(numericList)
+// console.log(numericList)
 
 /// first step 
- 
+
+
+
+
+
+
+// EXO 07 Create a function that takes two numbers and a mathematical operator + - / * and will perform a calculation with the given numbers.
+
+// Notes
+// If the input tries to divide by 0, return: "Can't divide by 0!"
+
+/*
+function calculator (num1,numOperator,num2){
+
+switch (numOperator) {
+    case "+":
+         return num1 + num2
+        
+        break;
+    case "-":
+        return num1 - num2
+
+        break ; 
+    case "/":
+        
+         if ( num2 === 0){
+            return "Can't divide by 0!" ; 
+         } else {
+            return num1 / num2 
+         }
+        break ; 
+    case "*" :
+        return  num1 * num2 
+        break;   
+}
+
+} console.log(calculator(5654, "+",1000 ))
+
+*/
+
+
+
+// areaOfCountry("Russia", 17098242) ➞ "Russia is 11.48% of the total world's landmass"
+
+// areaOfCountry("USA", 9372610), "USA is 6.29% of the total world's landmass"
+
+// areaOfCountry("Iran", 1648195) ➞ "Iran is 1.11% of the total world's landmass"
+// Notes
+// The total world's landmass is 148,940,000 [Km^2]
+// Round the result to two decimal places.
+
+
+// Exercise 08 Create a function that takes a country's name and its area as arguments and returns the area of the country's proportion of the total world's landmass.
+ /*
+function areaOfCountry (countryName,countryArea) {
+
+    worldMass= 148940000 ;
+
+    percent = (countryArea * 100)/ worldMass ;
+
+    result = percent.toFixed(2)
+
+
+
+    return `${countryName} is ${result}% of the total world's landmass`
+
+
+}  console.log(areaOfCountry("Iran", 1648195)) */
+
+
+
+
+// let reverseWords=  (" the sky is blue");
+
+// reverseWords= (reverseWords.trim())
+// reverseWords = (reverseWords.split(" "))
+// reverseWords = reverseWords.filter ((el) => el)
+// console.log(reverseWords)
+// reverseWords= reverseWords.reverse();
+// reverseWords= reverseWords.join(" ");
+// console.log(reverseWords)
+
+/*
+function rvs (str){
+
+let resultstring = str
+     .trim( )
+     .split(" ")
+     .filter ((element) => element)
+     .reverse();
+     console.log(resultstring)
+    return resultstring.join(" ");
+
+}
+
+
+console.log(rvs("the sky is blue"))*/
+
+
+// reverseWords(" the sky is blue") ➞ "blue is sky the"
+
+// reverseWords("hello   world!  ") ➞ "world! hello"
+
+// reverseWords("a good example") ➞ "example good a"
+
+
+
+
