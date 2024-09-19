@@ -504,13 +504,6 @@ console.log(rvs("the sky is blue"))*/
 
 // 00.exo 
 
-//  paso 1 sumar todos los numeros entresi 
-
-// paso 2 verificar si la sumas es par o impar
-
-// paso 3 devolver y concatenar 
-
-
 let test = ["5","6","7"];
 
 
@@ -523,17 +516,10 @@ function suma (num){
     let stringNum = num
     .toString()
     .split("")
-    .map(Number)
+    //.map(Number)
+    .reduce((accumulator, currentDigit) => accumulator + Number(currentDigit) ,0);
     console.log(stringNum)
-    let newNum = stringNum.reduce((accumulator, currentValue) => accumulator + currentValue);
-    return newNum % 2 === 0 ? "Evenish" : "Oddish";
-  
-    // if ( newNum % 2 === 0 ){
-    //     return "Evenish"
-    // } else {
-    //     return "Oddish"
-    // }
-
+    return stringNum % 2 === 0 ? "Evenish" : "Oddish";
 }
 
 console.log(suma("4433"))
