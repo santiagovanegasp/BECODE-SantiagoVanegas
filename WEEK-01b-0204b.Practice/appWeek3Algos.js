@@ -502,7 +502,10 @@ console.log(rvs("the sky is blue"))*/
 
 /// ------------- ALGOS SERIE  03 --------------- ////
 
-// 00.exo 
+// 00.exo .
+
+
+/*
 
 let test = ["5","6","7"];
 
@@ -522,7 +525,7 @@ function suma (num){
     return stringNum % 2 === 0 ? "Evenish" : "Oddish";
 }
 
-console.log(suma("4433"))
+console.log(suma("4433"))*/
 
 // oddishOrEvenish(43) ➞ "Oddish"
 // // 4 + 3 = 7
@@ -535,3 +538,161 @@ console.log(suma("4433"))
 // oddishOrEvenish(4433) ➞ "Evenish"
 // // 4 + 4 + 3 + 3 = 14
 // 14 % 2 = 0 -
+
+
+// 01. EXO   Create a function that takes an array of objects (groceries) which calculates the total price and returns it as a number. A grocery object has a product, a quantity and a price, for example:
+
+/*
+console.log(getTotalPrice([
+        { product: "Milk", quantity: 1, price: 1.50 },
+        { product: "Eggs", quantity: 12, price: 0.10 },
+        { product: "Bread", quantity: 2, price: 1.60 },
+        { product: "Cheese", quantity: 1, price: 4.50 }
+      ]))
+
+  function getTotalPrice(items){
+
+    return items.reduce((acc,item)=>{
+        return acc + item.price * item.quantity ;
+
+    },0) 
+
+  } */ 
+
+
+// // 1 bottle of milk:
+// getTotalPrice([
+//     { product: "Milk", quantity: 1, price: 1.50 }
+//   ]) ➞ 1.5
+  
+//   // 1 bottle of milk & 1 box of cereals:
+//   getTotalPrice([
+//     { product: "Milk", quantity: 1, price: 1.50 },
+//     { product: "Cereals", quantity: 1, price: 2.50 }
+//   ]) ➞ 4
+  
+//   // 3 bottles of milk:
+//   getTotalPrice([
+//     { product: "Milk", quantity: 3, price: 1.50 }
+//   ]) ➞ 4.5
+  
+//   // Several groceries:
+//   getTotalPrice([
+//     { product: "Milk", quantity: 1, price: 1.50 },
+//     { product: "Eggs", quantity: 12, price: 0.10 },
+//     { product: "Bread", quantity: 2, price: 1.60 },
+//     { product: "Cheese", quantity: 1, price: 4.50 }
+//   ]) ➞ 10.4
+  
+//   // Some cheap candy:
+//   getTotalPrice([
+//     { product: "Chocolate", quantity: 1, price: 0.10 },
+//     { product: "Lollipop", quantity: 1, price: 0.20 }
+//   ]) ➞ 0.3
+
+
+
+
+/// 02 EXO Given a string, reverse all the words which have odd length. The even length words are not changed. Notes
+// There is exactly one space between each word and no punctuation is used.
+
+
+
+
+ function test2 (str){
+
+    str = str.split(" ")
+    let newArr = [];
+    
+    for ( let i = 0 ; i < str.length ; i++){
+        if ((str[i].length % 2 ) !== 0) {
+            newArr.push(str[i].split("").reverse().join(""))
+        } else {  newArr.push(str[i])
+       
+        }
+    }
+
+  return newArr.join(" "); 
+}
+
+ console.log(test2("Make sure uoy only esrever sdrow of ddo length"))
+
+
+ 
+// reverseOdd("Bananas") ➞ "sananaB"
+
+// reverseOdd("One two three four") ➞ "enO owt eerht four"
+
+// reverseOdd("Make sure uoy only esrever sdrow of ddo length")
+// ➞ "Make sure you only reverse words of odd length"
+
+
+let test = ("She eats super righteously") ;
+
+test = test.split(" ");
+
+console.log(test)
+
+console.log(test[0][test[0].length-1])
+
+// encontrar primera letra  y encontrar ultima letra 
+
+
+
+console.log(isSmooth("Someone is outside the doorway"))
+
+
+function isSmooth (userStr){
+
+    
+    userArray = userStr.split(" ")
+
+    let firstLetters = [];
+    let endLetters = [];
+
+    for ( let i = 0 ; i < userArray.length ; i++) {
+   
+       
+    
+        endLetters.push(userArray[i][userArray[i].length-1]) // find end letter of every word
+        firstLetters.push(userArray[i][0])
+        
+    } console.log(firstLetters)
+    console.log(endLetters)
+    
+    count = 0; 
+
+    for (let i = 1 ; i <firstLetters.length ; i++){
+        // count = 0;
+        if ( firstLetters[i] === endLetters[i-1]){
+            count ++;
+        } else {
+            count -- ;
+        }
+
+    } 
+
+    if (count === firstLetters.length - 1){
+        return true ; 
+    } else {
+        return false ; 
+    }
+}
+
+
+
+
+
+/// luego crear los condicionales  
+
+
+ 
+
+
+
+
+// isSmooth("Marta appreciated deep perpendicular right trapezoids") ➞ true
+
+// isSmooth("Someone is outside the doorway") ➞ false
+
+// isSmooth("She eats super righteously") ➞ true
