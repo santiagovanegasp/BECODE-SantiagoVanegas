@@ -627,25 +627,20 @@ console.log(getTotalPrice([
 // ➞ "Make sure you only reverse words of odd length"
 
 
-let test = ("She eats super righteously") ;
-
-test = test.split(" ");
-
-console.log(test)
-
-console.log(test[0][test[0].length-1])
-
 // encontrar primera letra  y encontrar ultima letra 
 
 
 
-console.log(isSmooth("Someone is outside the doorway"))
+// 03 EXO -- Create a function that determines whether the input sentence is a smooth sentence, returning a boolean value true if it is, false if it is not.
+
+/*
+console.log(isSmooth("Marta appreciated deep perpendicular right trapezoids"))
 
 
 function isSmooth (userStr){
 
-    
-    userArray = userStr.split(" ")
+
+    userArray = (userStr.toLowerCase()).split(" ")
 
     let firstLetters = [];
     let endLetters = [];
@@ -678,21 +673,45 @@ function isSmooth (userStr){
         return false ; 
     }
 }
+    */
 
-
-
-
-
-/// luego crear los condicionales  
-
-
- 
-
-
-
+ ///////// TEST INPUTS  
 
 // isSmooth("Marta appreciated deep perpendicular right trapezoids") ➞ true
 
 // isSmooth("Someone is outside the doorway") ➞ false
 
 // isSmooth("She eats super righteously") ➞ true
+
+
+
+// EXO 04 SERIE 3
+
+// Create a function that takes an array of numbers and return "Boom!" if the digit 7 appears in the array. Otherwise, return "there is no 7 in the array".
+
+
+
+
+function sevenBoom(userArray){
+
+    userArray =  userArray.join("")
+    return userArray.includes("7") ?   "Boom!" : "there is no 7 in the array" ;  
+
+}
+
+
+
+console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7]))
+
+
+
+//test inputs  
+
+// sevenBoom([1, 2, 3, 4, 5, 6, 7]) ➞ "Boom!"
+// // 7 contains the number seven.
+
+// sevenBoom([8, 6, 33, 100]) ➞ "there is no 7 in the array"
+// // None of the items contain 7 within them.
+
+// sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
+// // 97 contains the number seven.
