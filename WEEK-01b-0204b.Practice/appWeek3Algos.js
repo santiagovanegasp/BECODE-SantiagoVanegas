@@ -312,9 +312,8 @@ function removeLeadingTrailing(UserNum){
 //console.log(resultNum); test 
 return resultNum; 
 }
+
 */
-
-
 
 /*
 sortIt([4, 1, 3]) ➞ [1, 3, 4]
@@ -597,7 +596,7 @@ console.log(getTotalPrice([
 // There is exactly one space between each word and no punctuation is used.
 
 
-
+/*
 
  function test2 (str){
 
@@ -610,14 +609,14 @@ console.log(getTotalPrice([
         } else {  newArr.push(str[i])
        
         }
-    }
+    
 
   return newArr.join(" "); 
 }
 
  console.log(test2("Make sure uoy only esrever sdrow of ddo length"))
 
-
+*/
  
 // reverseOdd("Bananas") ➞ "sananaB"
 
@@ -692,16 +691,16 @@ function isSmooth (userStr){
 
 
 
-function sevenBoom(userArray){
+// function sevenBoom(userArray){
 
-    userArray =  userArray.join("")
-    return userArray.includes("7") ?   "Boom!" : "there is no 7 in the array" ;  
+//     userArray =  userArray.join("")
+//     return userArray.includes("7") ?   "Boom!" : "there is no 7 in the array" ;  
 
-}
+// }
 
 
 
-console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7]))
+// console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7]))
 
 
 
@@ -715,3 +714,110 @@ console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7]))
 
 // sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
 // // 97 contains the number seven.
+
+
+// EXO 05 SERIE 3 
+
+
+
+
+// Create a function that converts Celsius to Fahrenheit and vice versa.
+
+// Notes
+// Round to the nearest integer.
+// If the input is incorrect, return "Error".
+// Look on Google how to convert F to C and vice-versa
+
+
+/*
+console.log(convert("35°C"))
+
+function convert (str){
+    str = str.toLowerCase();
+    str = str.split("°")
+
+    console.log(str)
+
+    findC = str.includes("c") 
+    findF =  str.includes("f")
+
+    if ( findC === true ){
+
+        return Math.round((str[0] * 9/5 ) + 32) + "°F";
+        
+    } else if (findF === true ){
+
+        return  Math.round((str[0]-32) * 5/9) + "°C" ;
+    } else {
+        return "Error"
+    }
+
+
+}   */
+
+
+
+// convert("35°C") ➞ "95°F"
+
+// convert("19°F") ➞ "-7°C"
+
+// convert("33") ➞ "Error"
+
+// ( °C × 9 / 5) + 32 =  °F
+
+// (32 °F − 32) × 5 / 9 = 0 °C 
+
+
+// exo06 serie 3 
+
+
+
+// Given what is supposed to be typed and what is actually typed, write a function that returns the broken key(s). The function looks like:
+
+// Notes
+// Broken keys should be ordered by when they first appear in the sentence.
+// Only one broken key per letter should be listed.
+// Letters will all be in lower case.
+
+
+// findBrokenKeys("happy birthday", "hawwy birthday") ➞ ["p"]
+
+// findBrokenKeys("starry night", "starrq light") ➞ ["y", "n"]
+
+// findBrokenKeys("beethoven", "affthoif5") ➞ ["b", "e", "v", "n"]
+
+
+console.log(findBrokenKeys("starry night", "starrq light"))
+
+function findBrokenKeys(good, bad ){
+    good = (good.replace(" ","") ).split("")
+    console.log(good)
+    bad = (bad.replace(" ","") ).split("")
+    console.log(bad)
+    let newArr = [];
+    // if ( good[2] !== bad[2]){
+    //     newArr.push(good[2])
+    // }
+    // console.log(newArr)
+
+   for ( let i = 0 ; i < good.length ; i++ ){
+    if ( good[i] !== bad[i]){
+        newArr.push(good[i])
+    }
+    }
+
+    let testLetters = [];
+    newArr.forEach((element) => {
+            if (!testLetters.includes(element)){
+                testLetters.push(element);
+            }
+        });
+        return testLetters;
+
+        //return arrUnique = [...new Set(newArr) ]     // Set  creates a new array with every element but don´t repeat.  
+    
+   } 
+
+   
+
+
