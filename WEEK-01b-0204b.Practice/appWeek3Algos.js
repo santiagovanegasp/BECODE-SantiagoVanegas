@@ -833,7 +833,7 @@ function findBrokenKeys(good, bad ){
 // Notes
 // Your code should be modular. You must be able to pass any numbers as n and the code should still work.
 
-
+/*
 console.log(fizzBuzz(50));
 function fizzBuzz (num){
         
@@ -851,29 +851,186 @@ function fizzBuzz (num){
         
         console.log(countNumers)      
     }  
-}
+} */
 
+    /// exo 02 advanced  
+
+// Write a function called ransomNote which takes two parameters : noteText and magazineText.
+
+// The goal is : with all the words of magazineText, you should be able to create the noteText.
+
+// The function should return true if we are able to write the noteText with the words from magazineText or false if we can't.
+
+
+// noteText = "this is a secret note to you from a secret admirer"
+
+// magazineText = "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"
+
+
+// ransomNote("this is a secret note to you from a secret admirer","puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you")
+
+// function ransomNote (noteText,magazineText){
+
+//     console.log(noteText.split(" "));
+//     magazineText.split(" ");
     
+// }
 
 
- // expected 
-// 1
-// 2
-// Fizz
-// 4
-// Buzz
-// Fizz
-// 7
-// 8
-// Fizz
-// Buzz
-// 11
-// Fizz
-// 13
-// 14
-// FizzBuzz
-// 16
-// 17
-// Fizz
-// 19
-// Buzz
+
+
+// let noteText= ["hello","this","is", "an","hello" ];
+
+// let magazineText = [ "hello", "this","is", "an", "example", "lets" , "go", "to", "see"]
+
+
+
+/*
+function prueba (note, magazine) {
+
+    const magazineText = magazine.split(" ");
+    const noteText = note.split(" ");
+    console.log(magazineText.includes("is"))
+    for (let i = 0 ; i < noteText.length; i++ ){
+        const indice = magazineText.indexOf(noteText[i])
+        console.log(noteText[i])
+        if (magazineText.includes(noteText[i])) {
+           
+        magazineText.splice(indice, 1 );
+           
+        } else {
+            return false; 
+        }
+    
+    } return true  ;
+} 
+
+console.log(prueba("this is a secret note to you from a secret admirer", "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"))  
+
+*/ 
+
+////////  EXO 03 Palindrome
+
+
+
+
+
+//let firstText =  "Madam, I'm Adam" ; 
+
+/*console.log(palindrome("race car"))
+
+function palindrome(firstText){
+
+    firstText = firstText.trim().toLowerCase().replace(" ","").split("")
+
+    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+firstText= firstText.filter((el) => {
+    return alphabet.includes(el)
+})
+
+
+console.log(firstText)
+let testReversed = [...firstText]
+testReversed = testReversed.reverse()
+console.log(testReversed)
+
+for ( let i = 0 ; i < firstText.length ; i++){
+    console.log(testReversed[i])
+    console.log(firstText[i])
+
+    if ( firstText[i] === testReversed[i]) {
+        return true; 
+    } else {
+        return false;
+    }
+} 
+} */
+
+// isPalindrome("kayak") ---> true
+// isPalindrome("race car") ---> true
+// isPalindrome("hello world") ---> false
+// isPalindrome("Madam, I'm Adam") ---> true
+
+
+
+
+
+
+
+// EXO Exercise.  // Caesar Cipher
+// caesarCipher("zoo keeper", 2) ----> "bqq mggrgt"
+
+// caesarCipher("bqq mggrgt", -2) ----> "zoo keeper"
+
+// caesarCipher("My name is Henrique", 3) ----> "pb qdph lv khqultxh "
+
+
+//olssv
+
+// console.log(caesarCipher("zoo keeper", ))
+
+// function caesarCipher (str ,num){
+//     str= str.toLowerCase();
+    
+//     let  alphabet= "abcdefghijklmnopqrstuvwxyz"
+//     alphabet= alphabet.split("");
+//     str = str.split("");
+//     let spacesIndex =[];
+//     const charSpace = " ";
+
+//     for (let i =0 ; i< str.length; i++){
+//         if ( str[i] === charSpace){
+//             spacesIndex.push(i)
+//         }
+
+//     } 
+//     let newArr= [];
+//     for ( let i = 0 ; i< str.length ; i++){
+//         if ( alphabet.indexOf(str[i]) !== -1){
+//             newArr.push(alphabet.indexOf(str[i]))
+//         } 
+//     }
+//     cipherArray = [];
+//     cipherArray = newArr.map((x) => {
+//         if (num < 0) {
+//             return (x + num + 26) % 26; // Ajuste para números negativos
+//         } else if (x + num > 25) {
+//             return (x + num) % 26; // Ajuste para números mayores a 25
+//         } else {
+//             return x + num;
+//         }
+//     });
+//     endArray =[];
+//     for ( let i =0 ; i <cipherArray.length ; i++){
+//         endArray.push(alphabet[cipherArray[i]])
+//         }
+//     for ( let i=0 ; i<spacesIndex.length; i++)  {
+//         endArray.splice(spacesIndex[i],0," "); 
+//     }  
+       
+//     return endArray.join("");
+
+// }
+
+
+
+console.log(caesarCipher("My name is Henrique", 3))
+
+function caesarCipher(str, num) {
+    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    str = str.toLowerCase(); // Convertir a minúsculas
+    let result = "";
+
+    for (let char of str) {
+        if (char === " ") {
+            result += char; // Mantener los espacios
+        } else {
+            let currentIndex = alphabet.indexOf(char);
+            let newIndex = (currentIndex + num + 26) % 26; // Ajuste para desplazamientos
+            result += alphabet[newIndex]; // Añadir la letra cifrada
+        }
+    }
+
+    return result;
+}
