@@ -1142,3 +1142,90 @@ function mySum (numArray,sum){
 //     fibonacci(4) ----> [1, 1, 2, 3]
 // fibonacci(9) ----> [1, 1, 2, 3, 5, 8, 13, 21, 34]
 // fibonacci(6) ----> [1, 1, 2, 3, 5, 8]
+
+
+
+//////  05. ALGOS ONE LINERS //////
+
+
+//  EXO 01. Create a function that remove duplicates from an array.
+
+// removeDuplicates([4, 9, 5, 1, 3, 2, 4, 1, 8]);
+// // Result : [4, 9, 5, 1, 3, 2, 8]
+
+// removeDuplicates(["hello", "world", "goodbye", "world"]);
+// // Result : ['hello', 'world', 'goodbye']
+
+// removeDuplicates([true, true, false, true, true, false]);
+// // Result : [true, false]
+
+/*
+const removeDuplicates = (arr) => [...new Set(arr)];  // Return a new array only with unique values. 
+
+console.log (removeDuplicates(["hello", "world", "goodbye", "world"]));*/
+
+
+
+
+// 02. Create a function that capitalizes a string.
+
+const capitalize = (str) => str[0].toUpperCase() + str.slice(1)
+console.log(capitalize("belgium"));
+// Result : "Belgium"
+
+// 03 .  Find the days between 2 given days
+
+
+//const milisecs = 1000 * 60 * 60 * 24
+const dayDif = (date1, date2) => (date2-date1)/ 86400000
+
+console.log(dayDif(new Date("2020-10-21"), new Date("2021-10-22")))
+// ex :
+
+// dayDif(new Date("2020-10-21"), new Date("2021-10-22"));
+// // Result : 366 
+
+
+// EXO 04 Find the average between multiple numbers using reduce method.
+
+
+let numbb = (1, 2, 3, 4);
+
+const average = (...numbers) => (numbers.reduce((acc, val) => acc + val, 0)) / numbers.length;
+// REST operator allows a function to accept an indefinite number of arguments as an array 
+
+
+console.log(average(1,2,3,4,))
+// Result: 2.5
+
+
+
+// EXO 05 Get the Smallest Element of an Array
+
+
+const getSmallest = (arr) => {arr.sort((a,b) => a-b) ; return arr[0] } 
+
+console.log(getSmallest([13, 7, 11, 3, 9, 15, 17]))
+
+
+// const arr = [13, 7, 11, 3, 9, 15, 17];
+
+// getSmallest(arr);
+// // Result: 3
+
+
+
+///  EXO 06 Check if Two Arrays Contain the Same Values
+
+
+const arr1 = [1, 2, 3, 4];
+const arr2 = [1, 2, 3, 4];
+const arr3 = [1, 2, 3];
+
+
+
+// areEqual(arr1, arr2);
+// // Result : true
+
+// areEqual(arr1, arr3);
+// // Result : false
