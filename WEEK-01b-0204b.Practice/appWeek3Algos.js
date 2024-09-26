@@ -968,53 +968,56 @@ for ( let i = 0 ; i < firstText.length ; i++){
 
 //olssv
 
-// console.log(caesarCipher("zoo keeper", ))
+/*
+console.log(caesarCipher("zoo keeper", 2))
 
-// function caesarCipher (str ,num){
-//     str= str.toLowerCase();
+function caesarCipher (str ,num){
+    str= str.toLowerCase();
     
-//     let  alphabet= "abcdefghijklmnopqrstuvwxyz"
-//     alphabet= alphabet.split("");
-//     str = str.split("");
-//     let spacesIndex =[];
-//     const charSpace = " ";
+    let  alphabet= "abcdefghijklmnopqrstuvwxyz"
+    alphabet= alphabet.split("");
+    str = str.split("");
+    let spacesIndex =[];
+    const charSpace = " ";
 
-//     for (let i =0 ; i< str.length; i++){
-//         if ( str[i] === charSpace){
-//             spacesIndex.push(i)
-//         }
+    for (let i =0 ; i< str.length; i++){
+        if ( str[i] === charSpace){
+            spacesIndex.push(i)
+        }
 
-//     } 
-//     let newArr= [];
-//     for ( let i = 0 ; i< str.length ; i++){
-//         if ( alphabet.indexOf(str[i]) !== -1){
-//             newArr.push(alphabet.indexOf(str[i]))
-//         } 
-//     }
-//     cipherArray = [];
-//     cipherArray = newArr.map((x) => {
-//         if (num < 0) {
-//             return (x + num + 26) % 26; // Ajuste para números negativos
-//         } else if (x + num > 25) {
-//             return (x + num) % 26; // Ajuste para números mayores a 25
-//         } else {
-//             return x + num;
-//         }
-//     });
-//     endArray =[];
-//     for ( let i =0 ; i <cipherArray.length ; i++){
-//         endArray.push(alphabet[cipherArray[i]])
-//         }
-//     for ( let i=0 ; i<spacesIndex.length; i++)  {
-//         endArray.splice(spacesIndex[i],0," "); 
-//     }  
+    } 
+    let newArr= [];
+    for ( let i = 0 ; i< str.length ; i++){
+        if ( alphabet.indexOf(str[i]) !== -1){
+            newArr.push(alphabet.indexOf(str[i]))
+        } 
+    }
+    cipherArray = [];
+    cipherArray = newArr.map((x) => {
+        if (num < 0) {
+            return (x + num + 26) % 26; // Ajuste para números negativos
+        } else if (x + num > 25) {
+            return (x + num) % 26; // Ajuste para números mayores a 25
+        } else {
+            return x + num;
+        }
+    });
+    endArray =[];
+    for ( let i =0 ; i <cipherArray.length ; i++){
+        endArray.push(alphabet[cipherArray[i]])
+        }
+    for ( let i=0 ; i<spacesIndex.length; i++)  {
+        endArray.splice(spacesIndex[i],0," "); 
+    }  
        
-//     return endArray.join("");
+    return endArray.join("");
 
-// }
+}  */
 
 
+// code simplifie 
 
+/*
 console.log(caesarCipher("My name is Henrique", 3))
 
 function caesarCipher(str, num) {
@@ -1022,15 +1025,120 @@ function caesarCipher(str, num) {
     str = str.toLowerCase(); // Convertir a minúsculas
     let result = "";
 
-    for (let char of str) {
+    for (let char of str) {   // for direct into the string 
         if (char === " ") {
             result += char; // Mantener los espacios
         } else {
-            let currentIndex = alphabet.indexOf(char);
+            let currentIndex = alphabet.indexOf(char);  // find the str char index in the bucle 
             let newIndex = (currentIndex + num + 26) % 26; // Ajuste para desplazamientos
             result += alphabet[newIndex]; // Añadir la letra cifrada
         }
     }
 
     return result;
-}
+}*/
+
+
+
+// EXO 04 Reverse 
+/*
+console.log(reverseStr("This is a string of words"))
+
+function reverseStr (str){
+
+    str= str.toLowerCase().split(" ")
+    const result = str.map(  word => word.split("").reverse().join("") ).join(" ") 
+    return result;
+} */ 
+
+
+// EXO 05 Reverse sans reverse 
+
+//     Create a function that takes an array and reverses it.
+
+// Notes
+// Don't use reverse()
+// Don't create a new array and push elements to it.
+
+/*
+    console.log(reverseArr(["salut","chao","sayonara",]))
+
+    function reverseArr (arr){
+
+        arr.sort((a , b ) => arr.indexOf(b) - arr.indexOf(a))
+
+        return arr
+    }  */ 
+
+
+
+
+
+  
+
+    /*Exercise. Two sums
+Write a function that takes as argument an array of numbers numArray and the sum we want to obtain.
+
+Your function should return every pair of numbers from numArray that adds up to the 'sum'
+
+Notes
+The result should be an array of arrays.
+Any number in the array can be used in multiple pairs (look at the "4" in the exemple below)
+
+
+*/  
+
+//     // For "sum" = 7
+// [1, 6, 4, 5, 3, 3] ---> [[6,1], [3,4], [3,4]]
+
+
+/*
+console.log(mySum([1, 6, 4, 5, 3, 3] ,7)) 
+
+function mySum (numArray,sum){
+
+    let result = []; // array final to show 
+    for (let i = 0 ; i< numArray.length ; i++){   // first bucle 
+
+        for (let j = i+1 ; j< numArray.length ; j++){ /// second bucle  nested loop  
+            if ( numArray[i]+ numArray[j] === sum ){
+                result.push([numArray[j] , numArray[i]])
+            }
+        }
+
+    }
+
+    return result;
+
+}  */ 
+
+
+
+    //  EXO 07.Advanced fFibonacci
+
+    // fFibonacci sequence starts with 1 and 1 and the next numbers are always the sum of the last two numbers. So... Here is the sequence :
+
+    // 1 1 2 3 5 8 13 21 34 ...
+    
+    // Write a function that takes a num number and returns an array with the num first elements of the Fibonacci sequence.
+    
+    // Notes
+    // Recursion would be the best way to solve it but there is another simple way.
+
+
+    function fibonacci(n) {
+        
+        let result = [1, 1];
+        for (let i = 2; i < n; i++) {
+            result.push(result[i - 1] + result[i - 2]);
+        }
+     
+        return result
+    }
+    
+    console.log(fibonacci(9));
+    
+
+//     fibonacci(4) ----> [1, 1, 2, 3]
+// fibonacci(9) ----> [1, 1, 2, 3, 5, 8, 13, 21, 34]
+// fibonacci(6) ----> [1, 1, 2, 3, 5, 8]
