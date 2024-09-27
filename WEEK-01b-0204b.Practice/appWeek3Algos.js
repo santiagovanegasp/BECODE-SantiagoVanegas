@@ -885,7 +885,7 @@ function fizzBuzz (num){
 
 
 
-/*
+
 function ransomNote (note, magazine) {
 
     const magazineText = magazine.split(" ");
@@ -900,8 +900,9 @@ function ransomNote (note, magazine) {
     } return true  ;
 } 
 
-console.log(ransomNote("this is a secret note to you from a secret admirer", "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"))  
-*/
+console.log(ransomNote("this is a secret note to you from a admirer", "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"))  
+
+
 
 
 ////////  EXO 03 Palindrome
@@ -1055,15 +1056,16 @@ function reverseStr (str){
 // Don't use reverse()
 // Don't create a new array and push elements to it.
 
-/*
-    console.log(reverseArr(["salut","chao","sayonara",]))
 
-    function reverseArr (arr){
 
-        arr.sort((a , b ) => arr.indexOf(b) - arr.indexOf(a))
+    /*
 
-        return arr
-    }  */ 
+    console.log(reverseArr(["salut",2,3,"sayonara","ab"]))
+
+    function reverseArr (arr){ return arr.sort((a , b ) => arr.indexOf(b) - arr.indexOf(a)) }  
+    
+
+    */  
 
 
 
@@ -1087,8 +1089,8 @@ Any number in the array can be used in multiple pairs (look at the "4" in the ex
 // [1, 6, 4, 5, 3, 3] ---> [[6,1], [3,4], [3,4]]
 
 
-/*
-console.log(mySum([1, 6, 4, 5, 3, 3] ,7)) 
+
+console.log(mySum([1, 6, 4, 5, 3, 3] ,6)) 
 
 function mySum (numArray,sum){
 
@@ -1105,7 +1107,7 @@ function mySum (numArray,sum){
 
     return result;
 
-}  */ 
+} 
 
 
 
@@ -1120,7 +1122,7 @@ function mySum (numArray,sum){
     // Notes
     // Recursion would be the best way to solve it but there is another simple way.
 
-
+/*
     function fibonacci(n) {
         
         let result = [1, 1];
@@ -1131,7 +1133,7 @@ function mySum (numArray,sum){
         return result
     }
     
-    console.log(fibonacci(9));
+    console.log(fibonacci(56564));  */ 
     
 
 //     fibonacci(4) ----> [1, 1, 2, 3]
@@ -1252,21 +1254,80 @@ console.log(randomRGB()); */
 // let test = "hello"
 // let ltr = "l"
 
-
+/*
 const occurencies = (str,ltr) =>  {let count =0; for (char of str) {if (char === ltr ){ count++ } } return count}
 
-console.log(occurencies("abracadabra", "a"))
+console.log(occurencies("oups", "z")) */
 
 
-
-
-
-
-occurencies("hello", "l");
+// occurencies("hello", "l");
 // // Result : 2
 
-occurencies("abracadabra", "a");
+// occurencies("abracadabra", "a");
 // // Result : 5
 
-occurencies("oups", "z");
+// occurencies("oups", "z");
 // // Result : 0
+
+
+// EXO 09   Create a function that returns the sum of all positive numbers in an array. (negative numbers should be ignored). If only negative numbers are present, it should return 0
+
+
+
+
+
+const onlyPositives = (arr) =>  arr= arr.reduce((acc, val) => val > 0 ? acc + val : acc, 0);
+
+console.log(onlyPositives([1, 6, 2, -3, 5, -12])) 
+
+
+
+
+
+// onlyPositives([1, 6, 2, -3, 5, -12]);
+// // Result : 14
+
+// onlyPositives([-3, -4, -2]);
+// // Result : 0
+
+
+// EXO 10 
+
+
+// Create a function that takes an array of objects and an object with one key/value pair as arguments. The function should return every entries that are the same than the object.
+
+// (This exercise will be very usefull in many scenarios later in the future)
+
+
+
+
+
+const scanAndFind = (arrObjects, objFind) => { const [key, value] = Object.entries(objFind)[0];  return arrObjects.filter(obj => obj[key] === value) }
+
+
+console.log(scanAndFind(
+    [
+      {
+        firstName: "Vito",
+        lastName: "Corleone",
+      },
+      {
+        firstName: "Jon",
+        lastName: "Snow",
+      },
+      {
+        firstName: "Harry",
+        lastName: "Potter",
+      },
+      {
+        firstName: "Michal",
+        lastName: "Corleone",
+      },
+    ],
+    {
+      lastName: "Corleone",
+    }
+  ));
+  
+  // Result : [{firstName: Vito, lastName: Corleone}, {firstName: Michael, lastName: Corleone}]
+
