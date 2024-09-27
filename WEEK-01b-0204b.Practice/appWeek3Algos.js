@@ -886,28 +886,23 @@ function fizzBuzz (num){
 
 
 /*
-function prueba (note, magazine) {
+function ransomNote (note, magazine) {
 
     const magazineText = magazine.split(" ");
     const noteText = note.split(" ");
-    console.log(magazineText.includes("is"))
     for (let i = 0 ; i < noteText.length; i++ ){
         const indice = magazineText.indexOf(noteText[i])
-        console.log(noteText[i])
-        if (magazineText.includes(noteText[i])) {
-           
-        magazineText.splice(indice, 1 );
-           
+        if (magazineText.includes(noteText[i])) {  
+        magazineText.splice(indice, 1 );  
         } else {
             return false; 
         }
-    
     } return true  ;
 } 
 
-console.log(prueba("this is a secret note to you from a secret admirer", "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"))  
+console.log(ransomNote("this is a secret note to you from a secret admirer", "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you"))  
+*/
 
-*/ 
 
 ////////  EXO 03 Palindrome
 
@@ -1216,7 +1211,7 @@ console.log(getSmallest([13, 7, 11, 3, 9, 15, 17]))
 
 
 ///  EXO 06 Check if Two Arrays Contain the Same Values
-
+/*
 
 const arr1 = [1, 2, 3, 4];
 const arr2 = [1, 2, 3, 4];
@@ -1224,8 +1219,54 @@ const arr3 = [1, 2, 3];
 
 
 
-// areEqual(arr1, arr2);
+const areEqual = (myarr,mySecondarr) => {myarr.sort((a, b) => a - b); mySecondarr.sort((a, b) => a - b); return JSON.stringify(myarr) == JSON.stringify(mySecondarr)};
+
+
+
+console.log(areEqual(arr1,arr3 ))
+
+*/
 // // Result : true
 
 // areEqual(arr1, arr3);
 // // Result : false
+
+
+
+/// EXO  07 Create a function that generates a random rgb value. The outcome should be the same as we declare it in CSS : rgb(?, ?, ?)
+
+// let a= parseInt(Math.random()*250) , b= parseInt(Math.random()*250), c= parseInt(Math.random()*250) ;
+// const randomRGB = () => `rgb(${a} , ${b} ,${c})`  ;
+/*
+const randomRGB = () => `rgb(${parseInt(Math.random()*250)}, ${parseInt(Math.random()*250)}, ${parseInt(Math.random()*250)})`; 
+
+console.log(randomRGB()); */
+
+
+// // Result : "rgb(232, 115, 164)"
+
+
+// EXO 8 Create a function that takes a string and a letter and counts how many times the letter appears in the string
+
+
+// let test = "hello"
+// let ltr = "l"
+
+
+const occurencies = (str,ltr) =>  {let count =0; for (char of str) {if (char === ltr ){ count++ } } return count}
+
+console.log(occurencies("abracadabra", "a"))
+
+
+
+
+
+
+occurencies("hello", "l");
+// // Result : 2
+
+occurencies("abracadabra", "a");
+// // Result : 5
+
+occurencies("oups", "z");
+// // Result : 0
