@@ -1,0 +1,94 @@
+
+body {
+    background-color: hsl(39, 6%, 83%);
+}
+
+a:link {
+    color: blue;
+  }
+
+h1 {
+    color: rgb(12, 37, 134);
+}
+
+.brand{
+    span {
+     color: #d69e36;
+    }
+    
+
+}
+
+.menu > li > a {   
+    
+        color: rgb(134, 12, 110);
+}
+.menu a span{
+    color:red;
+}
+
+
+
+[data-role="dropdown"]{
+    background-color:hsl(39, 21%, 73%) ;
+
+}
+
+.menu[data-role="dropdown"] a{
+    color : blue;
+}
+
+
+[data-role="dropdown"] li:nth-child(2) {
+    background-color: purple;
+
+}
+
+[data-role="dropdown"] a span{
+    color: rgb(14, 86, 96);
+}
+
+.content a{
+    color:darkcyan;
+}
+.content{
+    color: darkcyan;
+}
+
+
+
+a:link, a:visited {
+    text-decoration: none;
+  }
+
+
+
+
+
+/*
+<!--Format it, for the love of God !
+DON'T touch the HTML anymore. Work only in the styles.css from now on
+Make the body background color 39°, 6%, 83% (hsl)
+Make the h1 the color 12, 37, 134 (rgb)
+Make the word Project the color #d69e36 (hex)
+
+
+http://127.0.0.1:5500/CSS%20exercices/selectors%20and%20colors/
+
+Make the anchor tags of the first level of the menu the
+ color 134, 12, 110 (rgb).
+
+Tip : you will need to select the a  direct descendent of the li that are direct descent of the menu
+
+Make the color of the spans inside the anchor tags of the first level of the menu "red".
+
+Make the dropdown background color 39, 21%, 73% (hsl)
+
+
+Make the color of the spans inside the anchor tags of the second level of the menu 14, 86, 96 (rgb)
+
+
+Make the second li element of the second level of the menu background color purple (NO pseudo selectors !!!!!)
+
+Make all elements inside the content class dark cyan (use the VS Code color picker) in one only declaration
+Our beautiful result should look like this : --> */ 
