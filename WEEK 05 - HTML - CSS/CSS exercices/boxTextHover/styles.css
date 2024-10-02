@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif; /* Cambiado a font-family */
+    background-color: rgb(52, 52, 52);
+    color: white;
+}
+h1{
+    background-color: rgb(99, 95, 95);
+    text-align: center;
+    padding: 30px;
+    font-size: 45px;
+    letter-spacing: 2px;
+    font-weight: 300; /* Cambiar a un valor numérico */
+    border: 1px solid;
+    margin-bottom: 50px;
+    border-bottom: white solid 1px;
+
+}
+h1>span{
+    font-weight: bold;
+    color:#ffb30e ;
+}
+
+.paragraph{
+    display:grid;
+    place-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    line-height: 2em;
+    text-transform: uppercase;
+    font-style: italic;
+    
+}
+
+.paragraph>p>span{
+    font-weight: 700;
+    color: #ffb30e;   
+}
+
+a{
+    
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;  
+    font-weight: bold; 
+    margin: 0;
+}
+
+.anchortag{  
+    display: grid;
+    place-items: center;
+    padding: 10px 20px;
+    border: 2px;
+    border-radius: 5px;
+    max-width: 20vh;
+    margin: 0 auto;
+    background-color: #ffaf03;
+    color:black;
+    margin-top: 50px;
+ 
+
+}
+a:link {
+    color: black;
+
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    background-color: #fbca62;
+}
+
+
