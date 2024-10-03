@@ -200,3 +200,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+display : flow-root > contiene elementos flotantes dentro del bloque segun el contenido 
+
+overflow:hidden  > limita el contenido ej con los bordes
+
+// columns 
+beak-inside : avoid > evita que el contenido del bloque- linea se colpase( responsive)
+break-before : >
+
+white-space: nowrap > text in the same line  
