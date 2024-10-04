@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+img {
+    width: 100%;
+  }
+
+body{
+    background-color: #d74949;
+    font-family: "Roboto",sans-serif;
+    
+}
+
+.container{
+    background-color: #F3F3F3;
+    margin:0 auto;
+    max-width: 69.375rem;
+    padding: 6.25rem 3.125rem;
+    
+
+}
+
+.hero {
+    flex: 1; /* Esto hace que el contenido principal ocupe todo el espacio disponible */
+}
+
+h1{
+    font-weight: 300;
+    font-size: .875rem;
+    text-align: left;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+   }
+
+h2{
+    text-align: right;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+} 
+
+
+.container > p{
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-bottom: 2.375rem;
+    
+}
+
+.container> p >span{
+    color: #8F2727;
+    font-size: 1.25rem;
+    font-weight: 700;
+    
+}
+
+.card{
+    width: 200px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.name{
+    font-size: .875rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: .3125rem;
+    letter-spacing: 0.5px;
+}
+
+.position{
+    font-size: .875rem;
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.cardbottom img{
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-right: .25rem ;
+}
+
+.cardbottom{
+    padding: 20px 20px 30px;
+    max-height: 185px ;
+}
+
+.caard-top img{
+    height: 11.5625rem;
+    object-fit: cover;
+}
+
+.circle{
+    width: 54px;
+    height: 54px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    margin-top: -25px;
+    margin-left: 150px;
+    
+}
+
+.footer{
+    display: grid; 
+    place-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: .875rem;
+    background-color:   #3a3a3a;;
+    height: 4.375rem;
+    margin: 0 auto;
+
+}
+
+
