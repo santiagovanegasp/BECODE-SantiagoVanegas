@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Noto+Sans+Symbols:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body  {
+    background-color: #2d4480;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: "Noto Sans Symbols", sans-serif;
+
+}  
+
+.card{
+    width: 288px;
+    height: 469px;
+    background-color: white;
+    border: 1px;
+    border-color: black;
+    border-radius: 27px;
+    box-shadow: 
+        -5px 0 10px rgba(0, 0, 0, 0.5), /* left shadow*/
+        10px 0 10px rgba(0, 0, 0, 0.5),  /* right shadow */
+        0 10px 10px rgba(0, 0, 0, 0.5);  /* down shadow */
+    
+    
+}
+
+.top-card h1{
+    font-weight: 300;
+    font-size: 36px;
+    text-align: center;
+    padding: 15px;
+    
+
+}
+
+.top-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+
+} 
+
+ul {
+    list-style: none; /* Eliminar el estilo de lista por defecto */
+    padding: 0; /* Eliminar el padding */
+}
+
+li {
+    position: relative; /* Necesario para el posicionamiento del pseudoelemento */
+    padding-left: 25px; /* Espacio para el marcador */
+}
+
+.imcheck::before {
+    content: ''; /* Necesario para mostrar el pseudoelemento */
+    position: absolute; /* Permite posicionarlo */
+    left: 0; /* Alinea a la izquierda */
+    top: 50%; /* Alinea verticalmente */
+    transform: translateY(-40%); /* Centra el ícono verticalmente */
+    width: 16px; /* ajustar ancho */
+    height: 16px; /* ajustar alto*/
+    background-image: url('check.png'); 
+    background-size: contain; /* Asegura que la imagen se ajuste al contenedor */
+    background-repeat: no-repeat; 
+}
+
+.imuncheck::before {
+    content: ''; /* Necesario para mostrar el pseudoelemento */
+    position: absolute; /* Permite posicionarlo */
+    left: 0; /* Alinea a la izquierda */
+    top: 50%; /* Alinea verticalmente */
+    transform: translateY(-40%); /* Centra el ícono verticalmente */
+    width: 16px; /* Cambia el tamaño de la imagen aquí */
+    height: 16px; /* Cambia el tamaño de la imagen aquí */
+    background-image: url('uncheck.png'); /* Tu imagen */
+    background-size: contain; /* Asegura que la imagen se ajuste al contenedor */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+}
+
+
+
+.top-card li{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32.8px;
+    letter-spacing: 6%;
+    text-transform: uppercase;
+
+
+   
+} 
+
+img{
+    width: 16px;
+    height: 16px;
+}  
+
+.bottomcard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    
+
+}
+
+.bottomcard >.title1{
+    border-top: 2px solid black;
+    width: 188px;
+    height: 55px ;
+    text-align: center;
+}
+
+.bottomcard>.fore{
+    font-family: "Allan", serif;
+    color: #2d4480;
+    font-weight:400;
+    font-size: 36px;
+    align-self: flex-end;
+    padding-right: 70px;
+    margin-bottom: 50px;
+    
+    
+}
+
+.bottomcard>.button{
+    color: #253868;
+    font-family: "Noto Sans Symbols", sans-serif;
+    font-weight: 600;
+    size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFBC0F;
+    width: 181px;
+    height: 68px;
+    border-radius: 27px;
+   
+
+}
+
+
+

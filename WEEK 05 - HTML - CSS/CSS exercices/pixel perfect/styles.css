@@ -28,9 +28,6 @@ body{
 
 }
 
-.hero {
-    flex: 1; /* Esto hace que el contenido principal ocupe todo el espacio disponible */
-}
 
 h1{
     font-weight: 300;

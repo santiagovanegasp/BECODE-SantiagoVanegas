@@ -131,7 +131,36 @@ box - padding - border - margin
 
 
 
+/// flex 
 
+display:flex > convertir 
+
+justify-content > alinea elementos eje horizontal
+align-items > alinea elementos eje  vertical eje transv
+flex-direction > direccion del eje  row-reverse //column // column-reverse
+
+order > manipulate order of elements ej order: 1, -1 etc
+
+align-self > similar to align-items but its for an specific element  
+alinea un elemento flex a lo largo del eje transv
+ej class > .yellow{
+
+}
+
+flex-wrap > especifica si los elm flex son forzados a una solo linea o  se envuelven alrededor de lineas adicionales  ( en las cajas)
+
+
+
+flex-flow > shorthand for flex-direction nad flex-wrap
+
+align-content > alinea las lineas de un CONT flex cuando exista mas espacion en el eje transv
+
+flex-flow:wrap-reverse column-reverse;
+
+
+flex-basis: gives space to elements
+
+flex-grow: 
 
 
 
