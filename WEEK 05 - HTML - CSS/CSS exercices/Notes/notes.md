@@ -164,6 +164,18 @@ flex-grow:
 
 
 
+/////  GRID ///// 
+
+use fractions instead px,rem,em  
+
+grid-template-columns: 
+2fr, 1fr,2fr ; // repeat(#columns, 1fr) repeat(#columns/2, 1fr 2fr)
+
+grid-column-start / end
+grid-row-start /end 
+
+
+grid-template-columns: repeat(8, 12.5%)  // function repeat
 
 
 
