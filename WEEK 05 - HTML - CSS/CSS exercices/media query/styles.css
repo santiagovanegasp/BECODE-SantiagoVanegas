@@ -1,0 +1,62 @@
+/* Instructions :
+
+On mobile the body should have a background gold and only the h2 Mobile should appear
+
+From 768px (tablet) : background : pink and only the h2 Tablet should apppear.
+
+From 1280px (laptop 13') : background : chocolate and only the h2 Laptop 13 inches should apppear.
+
+From 1440px (laptop) : background : cadetblue and only the h2 Laptop should apppear.
+
+From 1920px (desktop) : background : cornflowerblue and only the h2 Desktop should apppear. */
+
+h2{
+    display: none;
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    h2.a {
+        display: block;
+      }
+    
+    body {
+        background-color: gold}
+    }
+
+@media screen and (min-width: 768px) and (max-width: 1279px){
+    body {
+        background-color: pink}
+        h2.b {
+            display: block;
+        }
+
+    }    
+
+
+@media screen and (min-width: 1280px) and (max-width: 1439px){
+    body {
+        background-color: chocolate}
+        h2.c {
+            display: block;
+        }
+
+    }   
+    
+ @media screen and (min-width: 1440px) and (max-width: 1919px){
+    body {
+        background-color: cadetblue}
+        h2.d {
+            display: block;
+        }
+
+    }     
+
+ @media screen and (min-width: 1920px) {
+    body {
+        background-color: cornflowerblue}
+        h2.e {
+            display: block;
+        }
+
+    }       
+    

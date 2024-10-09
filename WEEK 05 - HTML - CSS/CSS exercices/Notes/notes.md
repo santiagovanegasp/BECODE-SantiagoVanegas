@@ -265,3 +265,168 @@ la section seria el contenedor y el contenedor iria dentro de la seccion limitad
 
 no utilizar px para width
 > si se pide px poner max-width
+
+
+footer , header, position > sticky 
+
+header{
+	top: 0;
+}
+
+footer {
+	bottom:0;
+}
+
+************images responsive notes dave gray *******************
+
+ añadir desde html propiedades para reservar el tamaño de la imagen en caso de falla > solo numero ejm  width=200 height= 200
+
+width : 25% height: auto 
+ se aplica el porcentaje  y la altura automatica responsive
+
+reset for images
+display: block ;
+elimina el espacio por defecto 
+
+figcaption > nombre de la imagen
+
+.contenedorimg{
+width: 35% // 35% de la pantalla
+}
+
+valores asignados en la img
+width: 100% // 100% del contenedor
+height: auto; // responsive
+min-width : 100px ; // responsive no menos
+border: 5px double gray:
+border-radius: 50% // circulo
+
+utility classes 
+
+nowrap > obliga al navegador a mantener el contenido en las lineas que queramos, sin saltos de linea nobreaks
+ejm span class=nowrap
+
+css > nowrap{
+withe-space: nowrap;
+}
+
+background-color: rgb > usamos este fallback
+backgroubd-image : img // linear-gradinet
+background-repeat: repeat-y, repeat-x,no-repeat,repeat(default)
+background-position: mover la imagen de fondo
+
+background-size: cover; > la imagen cubre todo el contenedor ( se adapta al espacio) 
+
+text-shadow: para los textos sobre imagenes
+
+back-ground-color > aplicar color hsl en toda la seccion puede crear el efecto de filtros, usando black con trnasparencia por ejmp
+
+background-clip:
+needs webkit
+
+-webkit-background-clip: text;
+color black > transparent /// crea efecto de relleno en el texto con la imagen de fondo
+
+background-clip: text; / fallback for firefox
+look in caniuse.com 
+
+background: repeat position img/color  /// background shorthand
+
+
+*********  media querys *******
+
+
+syntax:
+@media media type and(condition: breakpoint){
+// css rules}
+
+
+@media screen and(min-width: 481px){
+// css rules
+}
+
+@media screen and(orientation: landscape){
+// css rules
+}
+
+@media screen and(min-aspect-ratio: 16/9){
+// css rules
+}
+
+Pseudo-Classes vs Pseudo-Elements 
+
+
+pseudo selector
+
+:is> 
+
+exp nav :is (a:hover, a:focus){
+code here
+}
+
+a :any link {
+selects 
+}
+
+:target {  //// who is selected
+code
+}
+
+selectors by attributes 
+exmp
+
+.card img[alt] {
+
+}
+
+.card img :not([alt)]) {
+
+}
+
+
+childs >>
+
+.card: nth-child (2){
+code
+}/// based in the original order in html , dont take media querys
+we can use instead(2) (odd) (even)
+
+
+
+Pseudo-Elements ::  after , before
+
+::after{
+content: '' ; /// 'hello
+
+
+
+### Common Media Query breakpoints:
+| Breakpoint | Description |
+| -------- | ---------- |
+| < 481px | Mobile devices |
+| 481px — 768px | iPads, Tablets |
+| 769px — 1024px | Small screens, laptops |
+| 1025px — 1200px | Desktops, large screens |
+| 1201px and greater | Extra large screens, TV |
+
+### Bootstrap breakpoints:
+| Breakpoint | Description |
+| -------- | ---------- |
+| < 576px | xs |
+| >=576px | small |
+| >=768px | medium |
+| >=992px | large |
+| >=1200px | xl |
+| >=1400px | 2xl |
+
+### Tailwind breakpoints:
+| Breakpoint | Description |
+| -------- | ---------- |
+| < 640px | xs |
+| >=640px | small |
+| >=768px | medium |
+| >=1024px | large |
+| >=1280px | xl |
+| >=1536px | 2xl |
+
+

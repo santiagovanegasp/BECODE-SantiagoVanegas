@@ -1,0 +1,60 @@
+
+
+
+.flex-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.flex-container div{
+    width: 100%;
+    height: 100px;
+}
+
+.flex-container div:nth-child(1){
+    background-color: yellow;
+}
+.flex-container div:nth-child(2){
+    background-color: rgb(0, 55, 255);
+}
+.flex-container div:nth-child(3){
+    background-color: rgb(255, 47, 0);
+}
+.flex-container div:nth-child(4){
+    background-color: rgb(8, 4, 2);
+}
+.flex-container div:nth-child(5){
+    background-color: rgb(191, 0, 255);
+}
+.flex-container div:nth-child(6){
+    background-color: rgb(0, 255, 110);
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .flex-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    }
+
+    @media screen and (min-width: 768px) {
+        .flex-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+        }
+   
+/* 
+
+ 
+    481px — 768px | iPads, Tablets |
+    | 769px — 1024px | Small screens, laptops |
+    | 1025px — 1200px | Desktops, large screens |
+
+
+Instead of a display: flex , use now a display grid.
+Give the template columns two 1fr
+For tablet give three 1fr
+For laptops give six 1fr (think of the function repeat)
