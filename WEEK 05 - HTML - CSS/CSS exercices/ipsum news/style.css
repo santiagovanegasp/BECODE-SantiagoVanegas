@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    display: inline-block;
+    color: aliceblue;
+  }
+
+body{
+    font-family: "Raleway", sans-serif;
+}
+
+.header{
+    background-color: #3A3D46;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: .875rem ;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+}
+
+.menu a{
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: 0.4s ease;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #007dfc;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+
+  .hero{
+    background-color: #232323;
+
+  }
+
+  .hero .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 25px 0px;
+    align-items: center;
+  }
+
+  .hero-text{
+    max-width: 70%;
+
+  }
+
+  .hero-text .title {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 60px;
+    margin-bottom: 15px;
+  }
+
+  .hero-text .title span {
+    color: #ffb800;
+  }
+  
+  .hero-text .subtitle {
+    color: #007dfc;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+  
+  .line {
+    height: 2px;
+    background-color: grey;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    color: white;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+  
+  .button {
+    color: black;
+    padding: 15px 30px;
+    background-color: #ffb800;
+    border-radius: 100px;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .button:hover {
+    transform: translateY(-3px);
+  }
+
+  .news{
+    background-color: #F6F6F6;
+    padding: 70px 0;
+  }
+
+  .news-grid {
+    max-height: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    grid-template-rows: 300px 300px;
+  }
+
+  .news h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .news h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: -12px;
+    left: 30px;
+  }
+
+
+  .news-grid a:first-child {
+    grid-row: 1/3;
+  }
+
+  .news-grid img{
+    
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+  }
+
+  .news-grid img:hover{
+    transform: scale(1.1);
+    filter: blur(0.5px);
+    
+  }
+
+  
+
+

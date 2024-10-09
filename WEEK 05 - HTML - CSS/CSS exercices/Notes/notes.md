@@ -252,3 +252,16 @@ beak-inside : avoid > evita que el contenido del bloque- linea se colpase( respo
 break-before : >
 
 white-space: nowrap > text in the same line  
+
+
+
+
+responsive 
+
+cambiar el contenedor 
+
+la section seria el contenedor y el contenedor iria dentro de la seccion limitado por el max width
+
+
+no utilizar px para width
+> si se pide px poner max-width

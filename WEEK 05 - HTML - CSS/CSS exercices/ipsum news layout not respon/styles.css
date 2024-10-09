@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: azure;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.container{
+    max-width: 1200px;
+    /* height: 1518px; */
+    background-color: aquamarine;
+    display: grid;
+    margin: 0 auto;
+    
+
+}
+
+.container .header{
+    background-color: blueviolet;
+    height: 4.125rem;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+}
+
+.container .header .imglogo{
+    background-color: blanchedalmond;
+    /* width: 9.4375rem; */
+    height: 1.875rem;
+}
+
+.container .header .menu{
+    
+    background-color: rgb(212, 163, 89);
+    
+}
+
+
+.container>.hero {
+    /* width: 1200px; */
+    height: 620px;
+    display: grid;
+    background-color: rgb(222, 71, 190);
+    grid-template-columns: 1fr 1fr;
+    gap: 31px;
+    padding-top: 15.5px;
+    padding-left: 15.5px;
+    
+    
+}
+
+.container .hero >.intro{
+    background-color: rgb(219, 199, 199);
+    height: 584px;
+    
+}
+
+.container .hero .backgroundlogo{
+    background-color: rgb(200, 231, 143);
+    height: 592px;
+}
+
+
+.container .article{
+    display: flex;
+    background-color: rgb(70, 117, 72);
+    /* width: 1200px; */
+    height: 830px;
+    padding-top: 150px;
+}
+
+.container .article .articlebox{
+    /* width: 1200px; */
+    height: 566px;
+    display: grid;
+    grid-template-columns: 386px 386px 386px;
+    grid-template-rows:  269px 269px ; 
+    background-color: rgb(109, 102, 102);
+    gap: .625rem;
+}
+
+.articlebox>.box1{
+
+    background-color: rgb(68, 18, 18);
+    /* width: 387px;
+    height: 537px; */
+    grid-row-start:1 ;
+    grid-row-end:4 ;
+    
+}
+
+.articlebox>.box2{ 
+    /* width: 387px;
+    height: 250px; */
+    background-color:rgb(159, 171, 48);
+    
+}
+
+.articlebox>.box3{ 
+    /* width: 260px;
+    height: 262px; */
+    background-color:rgb(180, 46, 166);
+    grid-column-start:3 ;
+    background-color: blueviolet;
+    
+}
+
+.articlebox>.box4{ 
+    /* width: 387px;
+    height: 260px; */
+    background-color:rgb(29, 76, 179);
+    grid-column-start: 2 ;
+    grid-row-start: 2;
+    
+}
+
+.articlebox>.box5{ 
+    /* width: 387px;
+    height: 260px; */
+    background-color:rgb(62, 180, 102);
+    grid-column-start: 3 ;
+    grid-row-start: 2;
+    
+}
+
+
+
+
+
+
+
+
