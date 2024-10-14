@@ -430,3 +430,11 @@ content: '' ; /// 'hello
 | >=1536px | 2xl |
 
 
+utiliza max-width 70% para los ementos dentro del contenedor 
+
+
+cuando hace le media query , cambia el contenido del desktop ej las columnas , y el query lo hace con min-width
+
+centrar contenidos cuando es un solo hijo 
+display grid
+place items 
