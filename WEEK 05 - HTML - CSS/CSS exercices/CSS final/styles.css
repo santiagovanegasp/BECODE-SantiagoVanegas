@@ -82,7 +82,7 @@ body{
   }
 
 
-  @media (max-width: 720px) {
+  @media (max-width: 740px) {
     .menu{
       display: none;
     }
@@ -207,6 +207,7 @@ body{
     background-color: black;
     color: white;
     max-width: 350px;
+    max-height: 506px;
     padding: 25px 15px;
     
     
@@ -214,6 +215,20 @@ body{
     flex-direction: column; */
     
     }
+
+
+    @media (max-width: 900px) {
+      .containerright{
+        
+        max-height: 630px;
+      
+        
+        
+        /* display: flex;
+        flex-direction: column; */
+        
+    }
+  }
 
 
     .ttl {
@@ -251,7 +266,7 @@ body{
     }
 
 
-    @media (max-width: 720px) {
+    @media (max-width: 740px) {
 
       body{
         background-color: #fffdfa;
@@ -363,7 +378,7 @@ body{
     }
 
 
-  .kenburns-top {
+  /* .kenburns-top {
       animation: kenburns-top 5s ease-out both;
     }
 
@@ -385,7 +400,7 @@ body{
   }
 
 
-}
+} */
 
 
 
@@ -425,7 +440,7 @@ body{
   }
 
 
-  @media (max-width: 720px) {
+  @media (max-width: 740px) {
 
     .container-posts{
       display: grid;
