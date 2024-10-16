@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0px auto;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0px;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.hero .container .container-content-hero {
+  max-width: 503px;
+  background-color: rgb(203, 202, 241);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero .container .container-content-hero h1 {
+  font-size: 4rem;
+  letter-spacing: 4.5%;
+  font-weight: 300;
+  line-height: 4.8rem;
+  color: white;
+  text-align: start;
+}
+.hero .container .container-content-hero h2 {
+  color: #E8AB36;
+  font-weight: 400;
+  letter-spacing: 4.5%;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-align: start;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #242439, #2b2c5d); /* Fondo degradado */
+  font-family: "Barlow", sans-serif;
+}
+
+.header {
+  background-color: transparent;
+  position: relative;
+}
+
+.burger {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.menu a {
+  color: white;
+  padding: 5px 10px;
+  transition: 0.4s ease;
+  border-radius: 5px;
+}
+.menu li a::after {
+  content: ".";
+}
+
+.menu a:hover {
+  background-color: #e7606c;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #FFFFFF;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.4rem;
+}
+.logo span {
+  color: #e7606c;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  background-image: url("../public/deco1.png");
+  background-size: cover;
+  width: 730px;
+  height: 747px;
+  z-index: -1;
+  top: -3.5%;
+  left: 50%;
+  overflow: hidden;
+}

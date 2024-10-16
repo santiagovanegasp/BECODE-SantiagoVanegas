@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import 'config';
+@import 'containers';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background: 
+        linear-gradient(to right, #242439, #2b2c5d); /* Fondo degradado */
+    // background-size: auto, cover;    
+
+    font-family: "Barlow", sans-serif;
+}
+
+
+
+.header{
+    background-color: transparent;
+    position: relative;
+
+}
+
+
+
+
+.burger{
+  display: none;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: .875rem ;
+    font-weight: 400;
+    
+}
+
+.menu {
+
+    a{
+    color: $first-color;
+    padding: 5px 10px;
+    transition: 0.4s ease;
+    border-radius: 5px;
+    }
+
+    li{
+        a::after {
+            content: ".";
+        }
+        
+    }
+    
+}
+
+.menu a:hover {
+    background-color: $second-color;
+  }
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #FFFFFF;
+}  
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 2.4rem;
+    span{
+        color: $second-color;
+    }
+}
+
+.header::after {
+    content: "";
+    position:absolute;
+    background-image: url('../public/deco1.png');
+    background-size: cover;
+    width: 730px;
+    height: 747px;
+    z-index: -1;
+    top: -3.5%;
+    left: 50%;
+    overflow: hidden;
+}
+
+
+
+
+
+
