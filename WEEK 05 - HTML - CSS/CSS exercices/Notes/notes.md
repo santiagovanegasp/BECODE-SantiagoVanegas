@@ -438,3 +438,76 @@ cuando hace le media query , cambia el contenido del desktop ej las columnas , y
 centrar contenidos cuando es un solo hijo 
 display grid
 place items 
+
+
+
+
+____________________ DOM_________________
+
+
+SELECTORS
+
+getElementById();
+
+getElementsByClassName();
+
+getElementsByTagName();
+
+querySelector();
+
+querySelectorAll();
+
+structure 
+
+document (main document object) → h1#main-heading (element object, child of document) → style (property of h1#main-heading wich is also an object) → color (property of the object style)
+
+In a very simplified way, it's like we had an object like this :
+
+mainHeading {
+  style: {
+    color: "red"
+  }
+}	
+
+styling 
+
+Good to know : the style attribute you give to an element will be implemented as inline-style.
+
+This is important because of... ? specificity !!! Remember ? The inline-style has the higher specificity in CSS.
+
+If you select a group of elements (all li for example), you will end up with an ARRAY(-like) ! So you can't assign a style to the array. You must loop over it.
+
+
+Creating and adding elements
+const myList = document.querySelector("ul");
+const myItem = document.createElement("li");
+
+myList.appendChild(myItem);
+
+
+innerText;
+
+innerHTML;
+
+
+
+Classes
+Handling classes are so commmon that we have particular methods to work with them.
+
+Let's see these ones :
+
+classList and its methods add, remove, contains and toggle
+
+
+traversing ___ 
+
+// To parents
+parentElement; // Represents the parent element
+
+// To children
+children; // Represents an array of all children
+
+// To sibling
+nextElementSibling; // Represents the next sibling element
+
+previousElementSibling; // Ok... you got this one ;)
