@@ -4,6 +4,12 @@ When we arrive at 5 total games, the buttons are disabled (we can't click them a
 
 Then, you can click on a button reset to start all over again.*/
 
+
+
+
+///// first 5 games win ///// 
+
+/*
 const btn= document.querySelectorAll('button');
 
 
@@ -59,6 +65,72 @@ btn[2].addEventListener('click', () => {  //reset
     scrPlayer2.style.color= 'black';
  
 });
+
+*/ 
+
+
+/// best of 5 games  
+
+const btn= document.querySelectorAll('button');
+
+
+let contadorplayer1 = 0;
+let contadorplayer2 = 0;
+let contadorWinner = 0;
+
+const scrPlayer1 = document.querySelector('.plr1');
+
+const scrPlayer2 = document.querySelector('.plr2');
+
+console.log("hello");
+
+function verifyWinner () {
+//contadorplayer1 === 5 || contadorplayer2 === 5
+    if ( contadorWinner === 5  )  {
+        btn[0].style.display= 'none';
+        btn[1].style.display= 'none';
+
+        if (contadorplayer1 > contadorplayer2 ) {
+        scrPlayer1.style.color= 'green';
+        scrPlayer2.style.color= 'red';
+        }else  {
+            scrPlayer1.style.color= 'red';
+            scrPlayer2.style.color= 'green';
+        }  
+    } 
+};
+
+btn[0].addEventListener('click', () => {
+    contadorplayer1++;
+    scrPlayer1.textContent= contadorplayer1;
+    console.log('Contador Player 1: ' + contadorplayer1);
+    contadorWinner++; 
+    verifyWinner();
+    
+});
+
+btn[1].addEventListener('click', () => {
+    contadorplayer2++;
+    contadorWinner++;
+    scrPlayer2.textContent= contadorplayer2;
+    verifyWinner();
+    
+});
+
+
+btn[2].addEventListener('click', () => {  //reset
+    contadorplayer2=0;
+    contadorplayer1=0;
+    contadorWinner= 0;
+    scrPlayer2.textContent= contadorplayer2;
+    scrPlayer1.textContent= contadorplayer1;
+    btn[1].style.display= 'inline-block';
+    btn[0].style.display= 'inline-block';
+    scrPlayer1.style.color= 'black';
+    scrPlayer2.style.color= 'black';
+ 
+});
+
 
 // 
 
