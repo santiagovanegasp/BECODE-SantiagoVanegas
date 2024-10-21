@@ -1,0 +1,32 @@
+
+body{
+background-image: linear-gradient( to left, rgb(67, 157, 157), rgb(249, 249, 249));
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.msg{
+    color: rgb(76, 76, 77);
+    font-size: 12px;
+}
+
+.error{
+  color: red;
+  font-size: 12px;
+  font-weight: 700;
+
+}
+
+.succes{
+    color: green;
+    font-size: 12px;
+    font-weight: 700;
+  
+  }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <H1> SIGN UP</H1><br><br>
+
+    </div>
+    
+
+
+    <div class="container">
+
+        <form method="get" id="myform"> 
+            <label for="username"> Username </label>
+            <input type="text" name="username" value="" id="username" >
+            <p class="msg" id="label-message"> must be only lowercase and at least 5 characters and at most 10 characters. </p>
+            <br>
+
+            <label for="email"> email</label>
+            <input type="email" name="email" value="" id="email">
+            <p class="msg" id="labelEmailMessage"> should be a valid email adress </p>
+            <br>
+
+            <label for="password"> password</label>
+            <input type="password" name="password" id="password" value="">
+            <p class="msg" id="labelPasswordMessage"> at least 8 characters and at most 15 characters </p>
+            <br>
+
+            <label for="confirmation">confirmation of password</label>
+            <input type="password" name="confirmation" id="confirmation" value="">
+            <p class="msg" id="labelConfirmationdMessage"> the password typed is not the same </p>
+            <br>
+            <input type="submit" value="send">
+    
+    
+  
+        </form>
+        
+
+
+    </div>
+
+  
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
+
