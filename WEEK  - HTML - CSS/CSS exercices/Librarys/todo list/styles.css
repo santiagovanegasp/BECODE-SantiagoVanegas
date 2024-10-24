@@ -1,0 +1,5 @@
+.divtask{
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    gap: 10px; 
+}
