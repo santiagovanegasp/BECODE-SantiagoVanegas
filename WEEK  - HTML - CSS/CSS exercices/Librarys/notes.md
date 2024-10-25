@@ -1,3 +1,7 @@
+ LOCAL STORAGE  : only saves strings!
+
+ SET => save   localStorage.setItem(key,value) // Sets the key/value pair in the local storage
+ GET => obtain localStorage.getItem(key)  // Returns value
 
 
 

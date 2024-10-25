@@ -1,0 +1,13 @@
+
+body{
+
+    background-color: rgb(73, 71, 71);
+}
+
+
+#modalDiv {
+
+    max-width: 400px;
+    background-color: aliceblue;
+    margin: 0 auto;
+}
