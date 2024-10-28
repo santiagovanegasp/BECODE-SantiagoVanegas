@@ -3,12 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modal</title>
+  <title>slide menu</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <H1> MODAL EXAMPLE</H1>
+  <header class="container"> 
+
+    <div class="div-img"> <img class="logo"  src="Diseño sin título (2).png" alt="logo"> </div>
+    
+    <div class="div-menu"> <ul class="navBar">
+      <li><a href="#"> Home </a> </li>
+      <li><a href="#"> Services </a> </li>
+      <li><a href="#"> contact </a> </li>
+    </ul> 
+  </div>
+  <!-- open slidemenu -->
+  <div class="burger-div" > 
+    <a href="#" id="burgerBtn"><img src="Diseño sin título.svg" alt="icon-burger"></a>
+    
+  </div>
+
+  <div id="myMenu" class="modal-menu">
+    <div class="menu-content">
+      <span class="close-btn-menu">&times;</span>
+      <!-- "×"  SYMBOL -->
+      <div class="div-slide-menu"> 
+        <ul class="navBar-slide">
+        <li><a href="#"> Home </a> </li>
+        <li><a href="#"> Services </a> </li>
+        <li><a href="#"> contact </a> </li>
+      </ul> 
+    </div>
+
+    </div>
+  </div>
+   
+
+  </header>
+
+
+
+  <section class="hero"> <H1> slide menu example</H1> </section>
 
 
   <button id="openModalBtn">Open modal</button>

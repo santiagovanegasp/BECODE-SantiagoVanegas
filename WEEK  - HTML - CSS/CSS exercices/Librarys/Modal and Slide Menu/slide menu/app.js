@@ -1,25 +1,51 @@
-// Obtén el modal
+// Modal DOME
 const modal = document.getElementById("myModal");
-
-// Obtén el botón que abre el modal
 const openModalBtn = document.getElementById("openModalBtn");
-
-// Obtén el elemento <span> que cierra el modal
 const closeBtn = document.querySelector(".close-btn");
 
-// Cuando el usuario hace clic en el botón, abre el modal
+
 openModalBtn.addEventListener("click", function() {
   modal.style.display = "block";
 });
 
-// Cuando el usuario hace clic en <span> (x), cierra el modal
+// <span> (x)
 closeBtn.addEventListener("click", function() {
   modal.style.display = "none";
 });
 
-// Cuando el usuario hace clic fuera del contenido del modal, también lo cierra
+// Click outside modal 
 window.addEventListener("click", function(event) {
   if (event.target === modal) {
     modal.style.display = "none";
   }
 });
+
+
+//////////////// __________    slider menu _________ //////////
+
+const menu = document.getElementById('myMenu')
+
+const openMenuBtn = document.getElementById("burgerBtn");
+
+const closeBtnMenu = document.querySelector(".close-btn-menu");
+
+openMenuBtn.addEventListener("click", function() {
+  menu.style.display = "block";
+});
+
+
+closeBtnMenu.addEventListener("click", function() {
+  menu.style.display = "none";
+});
+
+
+window.addEventListener("click", function(event) {
+  if (event.target === menu) {
+    menu.style.display = "none";
+  }
+});
+
+
+
+
+
