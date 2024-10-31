@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oxanium", sans-serif;
+}
+
+
+h2{
+
+    font-size: 5rem;
+    text-align: center;
+    }
+
+
+body{
+    background-color: aliceblue;
+}    
+
+
+    .section1, .section2, .section3, .section4 {
+        height: 100vh;
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;    /* Centra verticalmente */
+    }    
+
+
+.section1{
+    background-color: #f05d5e;
+    height: 100vh;
+  
+}
+
+.section1 h2,.section2 h2, .section4 h2  {
+    color: #e7ecef;
+}
+
+.section2{
+    background-color: #0f7173;
+    height: 100vh;
+}
+
+
+.section3{
+    background-color: #e7ecef;
+    height: 100vh;
+}
+
+.section3 h2{
+   color: #272932;
+}
+
+.section4{
+    background-color: #272932;
+    height: 100vh;
+}
