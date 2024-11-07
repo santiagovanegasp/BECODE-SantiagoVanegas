@@ -1,6 +1,448 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
+/* ///////////resets /////// */ 
 
 *{
-    font-family: ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
+
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+  }
+  
+  li{
+    list-style: none;
+  }
+
+
+ 
+
+  
+.container-page {
+    /* max-width: 1440px; */
+    margin: 0 auto;
+  }
+
+header{
+    background-color: #141517;
+    font-family: "Inria Sans", sans-serif;
+}
+
+#headercontainer{
+    max-width: 1075px ;
+    margin: 0 auto;
+    background-color: #141517;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+    color: white;
+}
+
+#nav-menu{
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        gap: 15px;
+        font-size: .875rem ;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+        
+}
+
+.be{
+    color: #CC0000;
+}
+
+
+body{
+    background-color: #1c212c;
+}
+
+#container-search-box{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-top:50px ;
+}
+
+
+#searchInput{
+    
+    height: 44px;
+    width: 272px;
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+}
+
+#btn-search{
+    background-color: #CC0000;
+    height: 44px;
+    width: 44px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: none;
+    color: white;
+}
+
+/* swiper _____________*/
+
+.swiper{
+    max-width: 1075px;
+    margin-bottom: 100px;
+}
+
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 234px;
+    height: 351px;
+    display: block;
+}
+
+
+/*     arrows  ____________*/ 
+.swiper {
+    max-width: 1075px;
+    margin-bottom: 100px;
+    position: relative; /* allows to position the arrows */
+    padding: 0 10px; /* Espacio para que las flechas no se superpongan a las imágenes */
+}
+
+/* Posiciona las flechas fuera de la galería */
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Ajusta la flecha derecha */
+.swiper-button-next {
+    right: -3px; /* Ajusta según el espacio que quieras fuera del contenedor */
+    font-size: 8px;
+}
+
+/* Ajusta la flecha izquierda */
+.swiper-button-prev {
+    left: -3px; /* Ajusta según el espacio que quieras fuera del contenedor */
+}
+
+/* Ajusta la flecha derecha */
+
+/*__________________*/
+
+
+/*  SECTION 3 latest-releases  */ 
+
+#latest{
+    color: white;
+}
+
+
+
+
+/* section 4 - movies by genre */ 
+
+
+.Movies-by-genre{
+
+    max-width: 1075px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+   
+}
+.content-tab p{
+    text-align: center;
+    margin-bottom: 30px;
+   
+}
+
+.content-tab {
+    padding-bottom: 20px;
+    border-bottom: solid 2px white;
+   
+}
+
+
+.subtitles {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
+    line-height: 19.36px;
+}
+
+#nav-menu-tab{
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    gap: 3.125rem;
+    font-weight: 400;
+    color: white;
+
+    
+}
+
+
+
+#nav-menu-tab li {
+    background-color: transparent;
+    padding: 10px; /* Padding to have the background bigger*/
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block; /* fix the background */
+}
+
+#nav-menu-tab li:hover {
+    background-color: #CC0000; /* Color de fondo al hacer hover */
+    box-shadow: 0px 0px 10px rgba(204, 0, 0, 0.5); /* Sombra para el hover */
+    transform: scale(1.05); /* Efecto de "crecimiento" sin desplazar el contenido */
+}
+
+
+
+
+
+ /* _________ FOOTER _______ */ 
+
+
+
+
+footer{
+    background-color: #141517;
+    font-family: "Inria Sans", sans-serif;
+}
+
+footer p{
+    color: #B8B8B8;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+ 
+#footercontainer{
+    max-width: 1075px ;
+    margin: 0 auto;
+    background-color: #141517;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    color: white;
+    min-height: 185px;
+} 
+
+
+
+
+
+/***********  SIGN IN MODAL  ***********/
+
+.modal {
+    display: block; /* starts hidden  , > container   */
+    position: fixed;
+    z-index: 9999; /* depth  >>> the content is show in front the page  */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.436); /* background  layer*/
+  }
+
+ 
+   .modal-content {
+
+    background-color: #000000;
+    color: white;
+    margin: 5% auto; /* screen center */
+    padding: 15px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 410px; 
+    height: 608px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   }
+
+
+  .close-btn {
+    position: absolute;    /* Posiciona el botón de cierre de manera absoluta */
+    top: 13%;             /* Alinea con la parte superior del modal */
+    left: 38% ; 
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: #000;
+    text-decoration: none;
+  }
+
+  #signupbtn , #loginbtn{
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    min-height: 54px;
+    min-width: 144px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+  }
+
+  #signupbtn{
+    border: solid 2px white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: transparent;
+
+  }
+
+  #loginbtn{
+    background-color: #CC0000;
+    margin-left:-3px ;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+  }
+
+  #btns-div{
+    margin-bottom: 50px;
+    margin-top: 70px;
+    
+  }
+
+
+  .Login-content{
+    display: flex;
+    flex-direction: column;
+    min-width: 288px;
+    /* align-items: center; */
+  
+
+  }
+
+  .Login-content input {
+    height: 44px;
+    border: none;
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+
+  .Login-content p {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19.36px;
+   color: #ffffff;
+  }
+
+  .Login-content p span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: #CC0000;
+   }
+
+  #checkbox-div {
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Alinea los elementos verticalmente */
+          /* Añade un poco de espacio alrededor */
+    gap: 5px;            /* Espacio entre el checkbox y el texto */
+    margin-bottom: 15px;
+}
+
+.remember-me-checkbox {
+    width: 16px;         /* Tamaño del checkbox */
+    height: 16px;
+    margin-top: 6px;
+    
+}
+
+#login-confirm-btn{
+    min-width: 288px;
+    min-height: 47px;
+    background-color: #CC0000;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/*  POPUP MOVIE */ 
+
+
+.modal-content-popup-movie {
+
+    background-color: #000000;
+    color: white;
+    margin: 5% auto; /* screen center */
+    padding: 15px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 742px; 
+    height: 608px;
+    text-align: center;
+    border-radius: 8px;
+    
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+ 
+
+
