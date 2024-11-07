@@ -267,23 +267,36 @@ footer p{
 
 /***********  SIGN IN MODAL  ***********/
 
-.modal {
-    display: block; /* starts hidden  , > container   */
+
+  #myModal {
+    display: none; /* Oculto inicialmente */
     position: fixed;
-    z-index: 9999; /* depth  >>> the content is show in front the page  */
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.436); /* background  layer*/
-  }
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+}
+
+#modal-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Ocupa todo el área de #myModal */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 
  
-   .modal-content {
+.modal-content {
 
     background-color: #000000;
     color: white;
-    margin: 5% auto; /* screen center */
+    margin: 5% auto; 
     padding: 15px;
     border: 1px solid #888;
     width: 80%;
@@ -295,12 +308,13 @@ footer p{
     flex-direction: column;
     align-items: center;
 
-   }
+} 
+
 
 
   .close-btn {
     position: absolute;    /* Posiciona el botón de cierre de manera absoluta */
-    top: 13%;             /* Alinea con la parte superior del modal */
+    top: 10%;             /* Alinea con la parte superior del modal */
     left: 38% ; 
     color: #aaa;
     font-size: 28px;
@@ -311,7 +325,7 @@ footer p{
   
   .close-btn:hover,
   .close-btn:focus {
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
   }
 
@@ -432,7 +446,7 @@ footer p{
 
   }
 
-  
+
 
 
 

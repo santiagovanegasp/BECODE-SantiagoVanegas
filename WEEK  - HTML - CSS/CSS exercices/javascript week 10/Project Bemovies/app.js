@@ -41,4 +41,34 @@ fetch('https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&language
   }) ; 
 
 
-  
+
+ // Selecciona los elementos necesarios
+const registermodal = document.querySelector(".modal-content");
+const modal = document.getElementById("myModal");
+const closeBtn = document.querySelector(".close-btn");
+const loginNavbarBtn = document.querySelector("#loginnavbar");
+const modalWrapper = document.querySelector("#modal-wrapper");
+
+// Evento para cerrar el modal al hacer clic en el botón de cerrar
+closeBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+// Evento para cerrar el modal al hacer clic en cualquier parte fuera de modal-content
+
+
+// Evento para abrir el modal al hacer clic en el botón de login
+loginNavbarBtn.addEventListener("click", function () {
+  modal.style.display = "block";
+});
+
+
+modalWrapper.addEventListener("click", function (event) {
+  if (event.target === modalWrapper) {
+    modal.style.display = "none";
+  }
+})
+
+
+
+//////// ca march , ne touche pas //// 
