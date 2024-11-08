@@ -26,10 +26,11 @@ a {
 
   
 .container-page {
-    /* max-width: 1440px; */
+/* max-width: 1440px; */
     margin: 0 auto;
   }
 
+  /* Header section____________ */
 header{
     background-color: #141517;
     font-family: "Inria Sans", sans-serif;
@@ -67,8 +68,10 @@ header{
 
 
 body{
-    background-color: #1c212c;
+    background-color: #191B20;
 }
+
+  /* search- section____________ */
 
 #container-search-box{
 
@@ -100,7 +103,7 @@ body{
     color: white;
 }
 
-/* swiper _____________*/
+/* swiper _____________  same code for all */ 
 
 .swiper{
     max-width: 1075px;
@@ -121,7 +124,7 @@ body{
 }
 
 
-/*     arrows  ____________*/ 
+/*     arrows swiper   ____________*/ 
 .swiper {
     max-width: 1075px;
     margin-bottom: 100px;
@@ -129,7 +132,7 @@ body{
     padding: 0 10px; /* Espacio para que las flechas no se superpongan a las imágenes */
 }
 
-/* Posiciona las flechas fuera de la galería */
+/* arrows out  */
 .swiper-button-next,
 .swiper-button-prev {
     position: absolute;
@@ -138,20 +141,16 @@ body{
     z-index: 10;
 }
 
-/* Ajusta la flecha derecha */
+
 .swiper-button-next {
-    right: -3px; /* Ajusta según el espacio que quieras fuera del contenedor */
+    right: -3px; /* space out the container */
     font-size: 8px;
 }
 
-/* Ajusta la flecha izquierda */
+
 .swiper-button-prev {
-    left: -3px; /* Ajusta según el espacio que quieras fuera del contenedor */
+    left: -3px;  /* space out the container */
 }
-
-/* Ajusta la flecha derecha */
-
-/*__________________*/
 
 
 /*  SECTION 3 latest-releases  */ 
@@ -161,9 +160,7 @@ body{
 }
 
 
-
-
-/* section 4 - movies by genre */ 
+/* section 4 - movies by genre_________________ */ 
 
 
 .Movies-by-genre{
@@ -210,9 +207,6 @@ body{
 
     
 }
-
-
-
 #nav-menu-tab li {
     background-color: transparent;
     padding: 10px; /* Padding to have the background bigger*/
@@ -226,15 +220,7 @@ body{
     box-shadow: 0px 0px 10px rgba(204, 0, 0, 0.5); /* Sombra para el hover */
     transform: scale(1.05); /* Efecto de "crecimiento" sin desplazar el contenido */
 }
-
-
-
-
-
  /* _________ FOOTER _______ */ 
-
-
-
 
 footer{
     background-color: #141517;
@@ -261,28 +247,24 @@ footer p{
     min-height: 185px;
 } 
 
-
-
-
-
-/***********  SIGN IN MODAL  ***********/
+/***********  SIGN UP // registrer  MODAL  ***********/
 
 
   #myModal {
-    display: none; /* Oculto inicialmente */
+    display: none; /* HYDE */
     position: fixed;
     z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
 #modal-wrapper {
     width: 100%;
     height: 100%;
-    position: absolute; /* Ocupa todo el área de #myModal */
+    position: absolute; /* takes all the space of myModal */
     top: 0;
     left: 0;
     display: flex;
@@ -313,8 +295,8 @@ footer p{
 
 
   .close-btn {
-    position: absolute;    /* Posiciona el botón de cierre de manera absoluta */
-    top: 10%;             /* Alinea con la parte superior del modal */
+    position: absolute;   
+    top: 10%;            
     left: 38% ; 
     color: #aaa;
     font-size: 28px;
@@ -397,14 +379,13 @@ footer p{
    
     display: flex;
     flex-direction: row;
-    align-items: center; /* Alinea los elementos verticalmente */
-          /* Añade un poco de espacio alrededor */
-    gap: 5px;            /* Espacio entre el checkbox y el texto */
+    align-items: center; /* align Y */
+    gap: 5px;         
     margin-bottom: 15px;
 }
 
 .remember-me-checkbox {
-    width: 16px;         /* Tamaño del checkbox */
+    width: 16px;         
     height: 16px;
     margin-top: 6px;
     
@@ -427,25 +408,117 @@ footer p{
 /*  POPUP MOVIE */ 
 
 
-.modal-content-popup-movie {
+#myModalmovie {
+    display: block; /* hyde au debut */
+    position: fixed;
+    z-index: 9998;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+}
+
+#modal-wrappermovie {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Ocupa todo el área de #myModalmovie */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+ 
+.modal-contentmovie {
 
     background-color: #000000;
     color: white;
-    margin: 5% auto; /* screen center */
-    padding: 15px;
+    margin: 5% auto; 
+    padding-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+
     border: 1px solid #888;
     width: 80%;
     max-width: 742px; 
-    height: 608px;
-    text-align: center;
+    height: 526px;
+    /* text-align: center; */
     border-radius: 8px;
-    
-    display: none;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 351px 1fr;
+    grid-template-columns: 234px 1fr;
+    gap: 15px;
+  
 
+} 
+
+
+
+  .close-btnmovie {
+    position: absolute;    /* Posiciona el botón de cierre de manera absoluta */
+    top: 13%;             /* Alinea con la parte superior del modal */
+    left: 27% ; 
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
   }
 
+  
+  .close-btnmovie:hover,
+  .close-btnmovie:focus {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+
+
+.img-popup{
+    max-width:  234px;
+    min-height: 351px;
+    border: #FFFFFF solid 1px;
+}
+#img-divmovies{
+    
+    background-color: #aaa;
+}
+
+#movie-content,#cast-div{
+    margin-left: 20px;
+}
+
+.tittlemovies{
+    color: #CC0000;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Inria Sans", sans-serif;
+}
+
+.tittlemovies{
+    color: #CC0000;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Inria Sans", sans-serif;
+}
+
+.subtitlemovies{
+    color: #E9E9E9;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Inria Sans", sans-serif;
+}
+
+.textmovies{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Inria Sans", sans-serif;
+
+}
 
 
 
