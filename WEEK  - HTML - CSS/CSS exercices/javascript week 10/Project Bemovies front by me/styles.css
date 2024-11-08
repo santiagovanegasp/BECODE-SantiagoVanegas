@@ -409,7 +409,7 @@ footer p{
 
 
 #myModalmovie {
-    display: block; /* hyde au debut */
+    display: none; /* hyde au debut   change to block */
     position: fixed;
     z-index: 9998;
     left: 0;
