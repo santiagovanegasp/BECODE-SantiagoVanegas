@@ -527,3 +527,60 @@ font-size: 14px;
 /* Modale connection ------------FIN------------------- */
 
 
+
+/*   hover  */ 
+
+/*  crear un modal para cada imagen , este modal debe tener las mismas dimensiones  de la imagen fondo negro transparente y tener las infos de cad apelicula */ 
+
+
+.swiper-slide {
+    position: relative;
+}
+
+
+
+.movie-info {
+    position: absolute;
+    top: 0;
+    left: 17px;
+    width: 235px;
+    height: 351px;
+    background-color: rgba(0, 0, 0, 0.641); /* Fondo semitransparente */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Transición suave */
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* .swiper-slide img {
+    cursor: pointer;
+    width: 234px;
+    height: 351px;
+    
+    display: block;
+    object-fit: cover;
+} */
+
+.swiper-slide:hover .movie-info {
+    opacity: 1; /* Muestra el tooltip en hover */
+}
+
+.movie-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 700;
+    line-height: 24px;
+    font
+
+}
+
+.movie-overview {
+    font-size: 14px;
+    margin-top: 5px;
+}

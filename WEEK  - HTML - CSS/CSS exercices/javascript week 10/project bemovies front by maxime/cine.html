@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="cine.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
 
 
 </head>
@@ -32,19 +33,22 @@
 
     <div class="swiper-container">
         <!-- Rajouter le Texte de l'inputRecherche dans la span class"inputResult" -->
-        <p>Results for <span class="inputResult"></span></p>
+        <p>Results for <span class="inputResult" id="inputResult"></span></p>
 
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper" id="swiper-container-search" >
            <!-- a chaque nouvelle image crée une div qui reprend la même class et une balise img avec un FOR ou While
               et supprime a chaque nouveau CLICK -->
             <div class="swiper-slide"><img src="https://fr.web.img6.acsta.net/pictures/22/01/18/10/13/5983633.jpg"
                     alt=""></div>
             <div class="swiper-slide"><img src="https://media-animation.be/IMG/jpg/image.jpg" alt=""></div>
+
             <div class="swiper-slide"><img
                     src="https://poster.moncinepack.fr/FR/poster/9A1DCF64/320/NVKZ5.jpg?optimizer=image" alt=""></div>
+
             <div class="swiper-slide"><img
                     src="https://cinemedia.cinedigitalmanager.com/medias//1/7c/7c3b8497-bec7-490c-91ad-bb26c3c0ba9e.jpeg"
                     alt=""></div>
+
             <div class="swiper-slide"><img
                     src="https://cdn.sortiraparis.com/images/80/98390/827545-e-t-l-extraterrestre-pour-les-40-ans-du-film-culte-une-projection-exceptionnelle-et-un-livre.jpg"
                     alt=""></div>
@@ -61,8 +65,10 @@
         <div class="swiper-wrapper">
              <!-- a chaque nouvelle image crée une div qui reprend la même class et une balise img avec un FOR ou While
               et supprime a chaque nouveau CLICK -->
-            <div class="swiper-slide"><img src="https://fr.web.img6.acsta.net/pictures/22/01/18/10/13/5983633.jpg"
-                    alt=""></div>
+            <div class="swiper-slide">
+                <img src="https://fr.web.img6.acsta.net/pictures/22/01/18/10/13/5983633.jpg" alt="">
+                    
+                </div>
             <div class="swiper-slide"><img src="https://media-animation.be/IMG/jpg/image.jpg" alt=""></div>
             <div class="swiper-slide"><img
                     src="https://poster.moncinepack.fr/FR/poster/9A1DCF64/320/NVKZ5.jpg?optimizer=image" alt=""></div>
@@ -191,11 +197,8 @@
     </div>
 
 
-
-
-
-
-
+    
+    
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="cine.js" defer></script>
 </body>
