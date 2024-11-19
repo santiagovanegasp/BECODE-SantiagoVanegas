@@ -14,7 +14,7 @@
     background-color: #1f2124;
     height: 100%
     }
-   
+
 
 
 
@@ -31,6 +31,8 @@
    font-family: "Inria Sans";
     font-weight: 700;
 }
+
+
 .colorSpan{
     color: rgb(199, 2, 9);
 }
@@ -39,13 +41,19 @@
     color: aliceblue;
     padding: 25px;
     font-size: 14px;
-    
     margin-bottom: 100px;
     display: flex;
     justify-content: right;
     gap: 15px;
     background-color: #141517
 }
+
+.toolbarUP a{
+    color: aliceblue;
+    font-size: 14px;
+}
+ 
+
 .toolbarUP p{
     font-family: "Inria Sans"
 }
@@ -98,15 +106,16 @@ color: aliceblue;
         /* Input + bouton de recherche FIN--------------------- */
         /* Resultat de recherche , Image de recherche (SWIPER)--------------- */
 .swiper-container{
-    max-width: 1075px;
-    max-height: 351px;
+   max-width: 1075px;
+   max-height: 351px;
    width: 80%;
    margin: auto;
-  
    /* border: dashed red; */
    overflow: hidden;
-
+   display: block;
+   
 }
+
 .swiper-container p{
     color: #FFFFFF;
     font-size: 16px;
@@ -124,7 +133,6 @@ color: aliceblue;
     position: absolute; 
     transform: translateY(300%); 
     z-index: 1;
-   
     color: white; 
     font-size: 30px; 
     margin: 100px;
@@ -141,13 +149,15 @@ color: aliceblue;
 
 .swiper-button-next2 {
     right: 10px;
-    transform: translateY(1200%);
+    transform: translateY(450%);
 }
 
+/*  450%  - 1200 */ 
+
 .swiper-button-prev2 {
-    
-    transform: translateY(1200%);
+    transform: translateY(450%);
 }
+
 
 
 
@@ -155,9 +165,8 @@ color: aliceblue;
  
   /* Genre comedy/romance ect...   et ligne--- DEBUT ------------- */
 .movie-genre{
-font-family: "Inter", sans-serif;
-color: #FFFFFF;
-
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -182,10 +191,10 @@ color: #FFFFFF;
     color: aliceblue;
     border: 0px;
     /* gap: 10px; */
-
-
 }
-.genre button:hover{
+
+
+.genre button:hover,.genre button.active {
     background-color: rgb(204, 1, 0);
     border-radius: 8px;
     height: 28px;
@@ -215,12 +224,13 @@ color: #FFFFFF;
    }
    .swiper-button-next3 {
        right: 10px; 
-       transform: translateY(2650%);
+       transform: translateY(1850%);
+       /*2650*/
    }
    
    .swiper-button-prev3 {
     
-       transform: translateY(2650%);
+       transform: translateY(1850%);
    }
  /* Swiper3 --------------------FIN------------------------- */
 /* Toolbar(footer)-------------DEBUT-------------------------- */
@@ -268,6 +278,7 @@ color: #FFFFFF;
 /* ToolBarDown(footer)-------------FIN------------------------- */
 
 /* Modale connection ------------DEBUT------------------- */
+
 .formulaire-connection-modale-BGround{
     display: none; 
     /* none */
@@ -429,29 +440,30 @@ width: 250px;
     z-index: 998; 
     
 }
+
 .modale-film{
-    display: block;
+
 top: 90px;
 left: 340px;
-position: fixed; 
-
+position: fixed;    
 z-index: 99998;
 background-color: black;
 width: 742px;
 height: 526px;
 max-width: 742px;
 max-height: 526px;
-
-
-
+display: block;
+/* test */ 
 
 }
+
 .image-film{
     max-width: 234px;
     max-height: 250px;
     margin-left: 80px;
-    margin-top: 100px;
+    margin-top: 55px;
 }
+
 .titre-film{
     font-weight: 700;
     width: 280px;
@@ -461,7 +473,9 @@ max-height: 526px;
     margin-left: 400px;
     margin-top: -250px;
     font-family: "Inria Sans";
-    color: red;
+    color: #CC0000;
+    text-transform: uppercase;
+    margin-bottom: 40px;
 }
 .annee-film{
     font-family: "Inria Sans";
@@ -474,8 +488,23 @@ max-height: 526px;
     color: white;
     font-size: 14px;
 }
+
+/* MOI */ 
+.note-film {
+    color: #CC0000; 
+    font-weight: 700;
+    width: 320px;
+    height: 20px;
+    margin-left: 400px;
+    margin-top: 15px;
+    font-family: "Inria Sans";
+    letter-spacing: 1.1px;
+    font-size: 20px;
+
+}
+
 .genre-film{
-     color: white; 
+    color: white; 
     font-weight: 700;
     width: 320px;
     height: 20px;
@@ -497,6 +526,9 @@ max-height: 526px;
     margin-left: 400px;
     margin-top: 25px;
     /* background-color: antiquewhite; */
+    overflow-y: auto; /* add vertica scroll    en cas ou  */
+    padding-right: 10px; /* scroll space */
+    margin-bottom: 10px;
 }
 .spanCast{
     /* background-color: aquamarine; */
@@ -513,7 +545,7 @@ max-height: 526px;
 }
 .cast-here{
     color: #FFFFFF;
-font-size: 14px;
+    font-size: 14px;
     /* background-color: #1f2124; */
     width: 240px;
     height: 46px;
@@ -526,61 +558,153 @@ font-size: 14px;
 
 /* Modale connection ------------FIN------------------- */
 
+.XTarget-global1{
+    cursor: pointer;
+    background-color: aquamarine !important;
+}
 
 
-/*   hover  */ 
-
-/*  crear un modal para cada imagen , este modal debe tener las mismas dimensiones  de la imagen fondo negro transparente y tener las infos de cad apelicula */ 
+/*   hover  --  CARDS INFO */ 
 
 
 .swiper-slide {
     position: relative;
 }
 
+.movie-info {
+    position: absolute;
+    top: 0;
+    left: 17px;
+    /* position full content 17px - 9px */ 
+    width: 235px;
+    height: 351px;
+    background-color: rgba(0, 0, 0, 0.815); /* Fondo semitransparente */
+    /* color: #fff; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Transición suave */
+    text-align: center;
+    padding: 10px;
+    word-wrap: break-word;  
+}
 
 
+
+
+
+/*
 .movie-info {
     position: absolute;
     top: 0;
     left: 17px;
     width: 235px;
     height: 351px;
-    background-color: rgba(0, 0, 0, 0.641); /* Fondo semitransparente */
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.815);
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     opacity: 0;
-    transition: opacity 0.3s ease; /* Transición suave */
+    transition: opacity 0.3s ease;
     text-align: center;
     padding: 10px;
-}
-
-
-/* .swiper-slide img {
-    cursor: pointer;
-    width: 234px;
-    height: 351px;
-    
-    display: block;
-    object-fit: cover;
-} */
+    word-wrap: break-word;  
+} */ 
 
 .swiper-slide:hover .movie-info {
     opacity: 1; /* Muestra el tooltip en hover */
+    cursor: pointer;
 }
 
-.movie-title {
+.movie-info .movie-title {
     font-size: 20px;
     font-weight: bold;
     font-family: 700;
     line-height: 24px;
-    font
-
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    margin-top: 45px;
 }
 
 .movie-overview {
     font-size: 14px;
     margin-top: 5px;
 }
+
+.movie-info .movie-release-date{
+    color: #B0B0B0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+.movie-info .movies-genres{
+
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+} 
+
+.movie-info  .movies-votes{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    font-family: "Inter", sans-serif;
+    color: #CC0000;
+}
+
+.movies-genres{
+    white-space: pre-wrap; /* Permite saltos de línea dentro del texto */
+    overflow-wrap: break-word; /* Asegura que el texto largo se ajuste */
+    word-wrap: break-word; /* Soporte para navegadores más antiguos */
+    max-width: 230px ;
+}
+
+/*changes swiper  */ 
+
+
+#swiper-container1{
+    max-width: 1075px;
+    max-height: 351px;
+    width: 80%;
+    margin: auto;
+    /* border: dashed red; */
+    overflow: hidden;
+    display: none;
+ }
+
+
+ #registerBtnHeader{
+    background-color: rgb(20, 21, 23);
+    font-size: 16px;
+    color: aliceblue;
+    border: 0px;
+    font-family: "Inria Sans";
+    cursor: pointer;
+   margin-top: -7px;
+
+ }
+
+
+ #registerBtnFooter{
+    background-color: rgb(20, 21, 23);
+    font-size: 16px;
+    color: aliceblue;
+    border: 0px;
+    font-family: "Inria Sans";
+    cursor: pointer;
+
+ }

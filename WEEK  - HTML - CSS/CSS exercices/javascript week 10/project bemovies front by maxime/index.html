@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="cine.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     
 
@@ -16,22 +16,21 @@
 
     <div class="toolbarUP">
         <h4 class="toolTitreRightUP"><span class="colorSpan">BE</span>MOVIES</h4>
-        <p>SEARCH</p>
-        <p>LATEST</p>
-        <p>GENRES</p>
-        <p>REGISTER</p>
+        <!-- need to be a tags or buttons -->
+        <a href="#search-section"><p>SEARCH</p></a>
+        <a href="#search-section"><p>LATEST</p></a>
+        <a href="#swiper-container-genre"><p>GENRES</p></a>
+        <button id="registerBtnHeader">REGISTER</button>
         <!-- rajouter lien Modale avec la class "connection-site1" a".formulaire-connection-modale-BGround" ( change display) -->
         <button class="connection-site1">SIGNIN</button>
     </div>
-    <div class="container-recherche">
+    <div class="container-recherche" id="search-section">
         <!-- Prendre le input class inputRecherche pour chercher le film dans APi et implanter  le texte dans class"InputResult" -->
         <input type="text" placeholder="Choix du film" class="inputRecherche"><button class="bouton-recherche">&#11106; </button>
     </div>
 
 
-
-
-    <div class="swiper-container">
+    <div class="swiper-container" id="swiper-container1" >
         <!-- Rajouter le Texte de l'inputRecherche dans la span class"inputResult" -->
         <p>Results for <span class="inputResult" id="inputResult"></span></p>
 
@@ -62,7 +61,7 @@
 
     <div class="swiper-container swiper-container2">
         <p>Latest releases</p>
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper" id="swiper-container-latest">
              <!-- a chaque nouvelle image crée une div qui reprend la même class et une balise img avec un FOR ou While
               et supprime a chaque nouveau CLICK -->
             <div class="swiper-slide">
@@ -103,7 +102,8 @@
     <div class="ligne"></div>
     
         <div class="swiper-container swiper-container3">
-        <div class="swiper-wrapper">
+            <p>Showing now: <span id="text-result-genre"> Thriller</span></p>
+        <div class="swiper-wrapper" id="swiper-container-genre">
              <!-- a chaque nouvelle image crée une div qui reprend la même class et une balise img avec un FOR ou While
               et supprime a chaque nouveau CLICK -->
             <div class="swiper-slide"><img src="https://m.media-amazon.com/images/I/31hygTcuzHL._AC_UF1000,1000_QL80_.jpg"
@@ -133,7 +133,7 @@
         <p>SEARCH</p>
         <p>LATEST</p>
         <p>GENRES</p>
-        <p>REGISTER</p>
+        <button id="registerBtnFooter">REGISTER</button>
         <!-- rajouter lien Modale avec la class "connection-site2" a".formulaire-connection-modale-BGround" ( change display) -->
         <button class="connection-site2">SIGNIN</button>
         </div>
@@ -149,10 +149,11 @@
    
     <div class="formulaire-connection-POP">
         <!-- Utilise le XTarget-global1 pour l'event click qui va enlever le modale la petite X juste avec un display none -->
-        <div class="XTarget-global1"> 
-        <div><img  class= "elispe" src="Ellipse.png" alt=""></div>
+        <div class="XTarget-global1" id="XTarget-global1"> 
+            <div id="close-btn-conect-Modal"><img  class= "elispe" src="Group 9.png" alt=""></div>
+        <!-- <div><img  class= "elispe" src="Ellipse.png" alt=""></div>
         <div class="XTarget1"><p>l</p> </div>
-        <div class="XTarget2"><p>l</p></div>
+        <div class="XTarget2"><p>l</p></div> -->
     </div>
         <div class="sign">
             
@@ -178,21 +179,22 @@
 <div class="modale-film-BGound">
     <div  class="modale-film">
         <div class="XTarget-global1"> 
-            <div><img  class= "elispe" src="Ellipse.png" alt=""></div>
-            <div class="XTarget1"><p>l</p> </div>
-            <div class="XTarget2"><p>l</p></div>
+            <div id="close-btn-film-Modal"><img  class= "elispe" src="Group 9.png" alt=""></div>
+            <!-- <div class="XTarget1"><p>l</p> </div>
+            <div class="XTarget2"><p>l</p></div> ne functionnent pas pour fermer -->
         </div>
         <div class="image-film"> <img class="swiper-slide" src="https://media-animation.be/IMG/jpg/image.jpg" alt=""></div>
         <div class="titre-film">Jean le pro</div>
         <div class="annee-film">1972</div>
-        <div class="note-film"></div>
+        <div class="note-film">★100</div>
         <div class="genre-film">drame/action</div>
-        <div class="synopsis-film"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, placeat vitae? At error, in architecto dolor reiciendis tempore laudantium explicabo, dolores a modi ipsa blanditiis atque obcaecati temporibus quasi incidunt.</p></div>
+        <div class="synopsis-film"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, placeat vitae? At error, in architecto dolor reiciendis tempore laudantium explicabo, dolores a modi ipsa blanditiis atque obcaecati temporibus quasi incidunt.   
+        </p></div>
         <div class="cast-film"></div><span class="spanCast">Cast:</span><p class="cast-here">Bonjour Marlon Brando, Al Pacino, James Caan,
             Robert Duval</p>
             
        
-        
+            
         </div>
     </div>
 
@@ -200,7 +202,7 @@
     
     
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="cine.js" defer></script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>
