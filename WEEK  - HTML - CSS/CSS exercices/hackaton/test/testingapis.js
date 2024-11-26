@@ -62,7 +62,7 @@ const kycBody = {
     "familyName": "Hurt",
     "address": "12 impasse Samson",
     "locality": "Pottrnec",
-    "email": "maeva.huart@voila.fr"
+    "email": "maeva.huart@voila.fr" 
 }
 const kycOptions = {
     method: "POST",
@@ -77,6 +77,8 @@ const kycTest =async () => {
         const reponse = await fetch(kycMatchURL, kycOptions);
         const myobj = await reponse.json();
         console.log(myobj);
+
+       
     }
     catch (e){
         console.log(e);

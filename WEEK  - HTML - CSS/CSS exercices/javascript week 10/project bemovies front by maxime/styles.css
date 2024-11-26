@@ -4,15 +4,16 @@
 
 
 
-
-
-
 *{  margin: 0;
     padding: 0;
     box-sizing: border-box;}
     body{
     background-color: #1f2124;
     height: 100%
+    }
+
+    a{
+        text-decoration: none ;
     }
 
 
@@ -51,22 +52,33 @@
 .toolbarUP a{
     color: aliceblue;
     font-size: 14px;
+    /*mine*/
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 14px;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    line-height: 17px;
+    /*mine*/
+    cursor: pointer;
 }
- 
+
+
 
 .toolbarUP p{
-    font-family: "Inria Sans"
+    font-family: "Inria Sans";
+    cursor: pointer;
 }
 
-.connection-site1{
+/* .connection-site1{
     background-color: rgb(20, 21, 23);
-    font-size: 16px;
+    font-size: 14px;
     color: aliceblue;
     border: 0px;
     font-family: "Inria Sans";
     cursor: pointer;
-   margin-top: -7px;
-}
+   
+} */
 
         /* Haut de page Toolbar FIN-------------------------*/
         /* Input + bouton de recherche--------------------- */
@@ -95,7 +107,7 @@
     cursor: pointer;
     border: 5px;
     border-color: #141517;
-background-color: red;
+background-color: #CC0000;
 color: aliceblue;
     font-size: 18px ;
     height: 38px;
@@ -129,7 +141,19 @@ color: aliceblue;
     display: block;
     object-fit: cover;
 }
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next{
+    position: absolute; 
+    transform: translateY(300%); 
+    z-index: 1;
+    color: white; 
+    font-size: 30px; 
+    margin: 100px;
+    /* border-radius: 50%;  */
+}
+
+
+
+.swiper-button-prev{
     position: absolute; 
     transform: translateY(300%); 
     z-index: 1;
@@ -137,15 +161,73 @@ color: aliceblue;
     font-size: 30px; 
     margin: 100px;
     border-radius: 50%; 
+
 }
+
+
+/*  swiper 1  personalized icons*/ 
+
+
+#swiper-button-next1,#swiper-button-prev1{
+    color: transparent; 
+};
+
+
+
+#swiper-button-next1 img{
+    width: 35px;
+    height: 31px;   
+}
+#swiper-button-prev1 img{
+    width: 31px;
+    height: 31px;   
+}
+
+#imgnext1{
+    width: 25px;
+    height: 25px;   
+}
+
+/*  swiper 2  personalized icons*/ 
+
+#swiper-button-next2{
+    color: transparent; 
+}
+#swiper-button-prev2{
+    color: transparent;
+}
+
+
+/*  arrows center*/ 
+#swiper-button-next2{
+    position: absolute; 
+    transform: translateY(230%); 
+    z-index: 1;
+    color: transparent; 
+    font-size: 30px; 
+    margin: 100px;
+    /* border-radius: 50%;  */
+
+}
+
+
+
+#swiper-button-next2 img{
+    width: 25px;
+    height: 25px;   
+}
+
+#swiper-button-prev2 img{
+    width: 31px;
+    height: 31px;   
+}
+
 
         /* Resultat de recherche , Image de recherche (SWIPER1) FIN------------------ */
     /* Swiper2 --------------------------------------------- */
 .swiper-container2 {
     margin-top: 100px; 
 }
-
-
 
 .swiper-button-next2 {
     right: 10px;
@@ -154,9 +236,30 @@ color: aliceblue;
 
 /*  450%  - 1200 */ 
 
-.swiper-button-prev2 {
-    transform: translateY(450%);
+#swiper-button-prev2 {
+    transform: translateY(508%);
+    left: 10px;
 }
+
+
+
+/*  swiper 3  personalized icons*/ 
+
+#swiper-button-next3, #swiper-button-prev3  {
+    color: transparent; 
+}
+
+#swiper-button-next3 img{
+    width: 25px;
+    height: 25px;   
+}
+
+#swiper-button-prev3 img{
+    width: 31px;
+    height: 31px;   
+}
+
+
 
 
 
@@ -174,43 +277,41 @@ color: aliceblue;
 
 }
 
-.genre{
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: 100px; 
-    gap: 30px; 
-    
-    
+.genre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    gap: 30px;
 }
 
-
-.genre button{
+.genre button {
     display: inline-block;
-    background-color: #1f2124;
     color: aliceblue;
     border: 0px;
-    /* gap: 10px; */
-}
-
-
-.genre button:hover,.genre button.active {
-    background-color: rgb(204, 1, 0);
+    background-color: transparent;
     border-radius: 8px;
-    height: 28px;
-    width: 60px;
-    display: inline-block;
-    cursor: pointer;
-    font-size: 14px;
-    box-shadow: 0px 4px 4px 0px #00000040;
-    transform: scale(1.1);
-    transition: 0.5s
-
+    padding: 5px 10px; /* Ajusta el relleno para adaptarse al contenido */
+    font-size: 14px; /* Consistencia del texto */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Asegura que el texto esté centrado */
 }
+
+.genre button:hover, .genre button.active {
+    background-color: #CC0000;
+    box-shadow: 0px 0px 10px rgba(204, 0, 0, 0.5); 
+    transform: scale(1.1); /* Escalado suave sin cambiar tamaño base */
+    cursor: pointer;
+}
+
+
+/* mine */ 
+
+
 .ligne{
     margin-top: -20px;
-    margin-left: 34%;
-    width:445px ;
+    margin-left: 30%;
+    width:600px ;
     height: 1px;
     background-color: aliceblue;
 
@@ -224,13 +325,13 @@ color: aliceblue;
    }
    .swiper-button-next3 {
        right: 10px; 
-       transform: translateY(1850%);
+       transform: translateY(1900%);
        /*2650*/
    }
    
    .swiper-button-prev3 {
     
-       transform: translateY(1850%);
+       transform: translateY(1900%);
    }
  /* Swiper3 --------------------FIN------------------------- */
 /* Toolbar(footer)-------------DEBUT-------------------------- */
@@ -252,14 +353,44 @@ color: aliceblue;
     display: flex;
     gap: 5px;
     padding-top: 10px;
+
 }
 .toolbarDown{
-    font-family: "Inria Sans";
-    font-weight: 700;
+    max-width: 1075px ;
+    margin: 0 auto;
+    background-color: #141517;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    color: white;
+    min-height: 185px;
+    color: #B8B8B8;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    
 }
+
+footer{
+    background-color: #141517;
+}
+
+
+.toolbarDown a{
+    color: aliceblue;
+    font-size: 14px;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 700;
+    line-height: 17px;
+    /*mine*/
+
+}
+
 
 .toolTitreRightDown{
     font-size: 36px;
+    color: #FFFFFF;
     
 
 }
@@ -329,7 +460,7 @@ z-index: 9999;
     color: #FFFFFF;
     height: 54px;
     width: 144px;
-    background-color:red;
+    background-color:#CC0000;
     border-radius: 0px 8px 8px 0px;
     font-size: 30px;
 }
@@ -365,7 +496,7 @@ margin-left: -150px;
 .modaleBtnLogin{
     font-family: "Inria Sans";
     color: white;
-    background-color: red;
+    background-color: #CC0000;
     font-weight: 700;
     font-size: 20px;
     margin-top: 45px;
@@ -689,22 +820,60 @@ display: block;
 
  #registerBtnHeader{
     background-color: rgb(20, 21, 23);
-    font-size: 16px;
+    font-size: 14px;
     color: aliceblue;
     border: 0px;
     font-family: "Inria Sans";
     cursor: pointer;
-   margin-top: -7px;
+    
 
  }
 
 
  #registerBtnFooter{
     background-color: rgb(20, 21, 23);
-    font-size: 16px;
+    font-size: 14px;
     color: aliceblue;
     border: 0px;
     font-family: "Inria Sans";
     cursor: pointer;
-
  }
+
+ /* changes css */ 
+
+ .toolbarUP{
+    max-width: 1075px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+ }
+
+header{
+    background-color: #141517;
+}
+
+
+.text-section{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+#signuptext1{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 29px;
+    letter-spacing: 3%;
+}
+
+#logintext1{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+    line-height: 29px;
+    letter-spacing: 3%;
+
+}

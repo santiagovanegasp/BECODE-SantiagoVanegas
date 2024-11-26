@@ -14,16 +14,21 @@
 
 <body>
 
-    <div class="toolbarUP">
-        <h4 class="toolTitreRightUP"><span class="colorSpan">BE</span>MOVIES</h4>
-        <!-- need to be a tags or buttons -->
-        <a href="#search-section"><p>SEARCH</p></a>
-        <a href="#search-section"><p>LATEST</p></a>
-        <a href="#swiper-container-genre"><p>GENRES</p></a>
-        <button id="registerBtnHeader">REGISTER</button>
-        <!-- rajouter lien Modale avec la class "connection-site1" a".formulaire-connection-modale-BGround" ( change display) -->
-        <button class="connection-site1">SIGNIN</button>
-    </div>
+    <header> 
+        <div class="toolbarUP">
+            <h4 class="toolTitreRightUP"><span class="colorSpan">BE</span>MOVIES</h4>
+            <!-- need to be a tags or buttons -->
+            <a href="#search-section"><p>SEARCH</p></a>
+            <a href="#search-section"><p>LATEST</p></a>
+            <a href="#movie-genre-tab"><p>GENRES</p></a>
+            <a id="registerBtnHeader">REGISTER</a>
+            <!-- rajouter lien Modale avec la class "connection-site1" a".formulaire-connection-modale-BGround" ( change display) -->
+            <a class="connection-site1">SIGNIN</a>
+        </div>
+
+
+    </header>
+   
     <div class="container-recherche" id="search-section">
         <!-- Prendre le input class inputRecherche pour chercher le film dans APi et implanter  le texte dans class"InputResult" -->
         <input type="text" placeholder="Choix du film" class="inputRecherche"><button class="bouton-recherche">&#11106; </button>
@@ -32,7 +37,7 @@
 
     <div class="swiper-container" id="swiper-container1" >
         <!-- Rajouter le Texte de l'inputRecherche dans la span class"inputResult" -->
-        <p>Results for <span class="inputResult" id="inputResult"></span></p>
+        <p class="text-section">Results for <span class="inputResult" id="inputResult"></span></p>
 
         <div class="swiper-wrapper" id="swiper-container-search" >
            <!-- a chaque nouvelle image crée une div qui reprend la même class et une balise img avec un FOR ou While
@@ -55,16 +60,16 @@
 
         <!-- <div class="swiper-pagination"></div> -->
 
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next" id="swiper-button-next1"> <img src="Vectorright.svg" alt="" id="imgnext1"></div>
+        <div class="swiper-button-prev" id="swiper-button-prev1"> <img src="nuevo left.svg"alt=""></div>
     </div>
 
     <div class="swiper-container swiper-container2">
-        <p>Latest releases</p>
+        <p class="text-section">Latest releases</p>
         <div class="swiper-wrapper" id="swiper-container-latest">
              <!-- a chaque nouvelle image crée une div qui reprend la même class et une balise img avec un FOR ou While
               et supprime a chaque nouveau CLICK -->
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
                 <img src="https://fr.web.img6.acsta.net/pictures/22/01/18/10/13/5983633.jpg" alt="">
                     
                 </div>
@@ -76,19 +81,19 @@
                     alt=""></div>
             <div class="swiper-slide"><img
                     src="https://cdn.sortiraparis.com/images/80/98390/827545-e-t-l-extraterrestre-pour-les-40-ans-du-film-culte-une-projection-exceptionnelle-et-un-livre.jpg"
-                    alt=""></div>
+                    alt=""></div> -->
         </div>
 
         <!-- <div class="swiper-pagination"></div> -->
-        <div class="swiper-button-next swiper-button-next2"></div> 
-        <div class="swiper-button-prev swiper-button-prev2"></div> 
+        <div class="swiper-button-next swiper-button-next2" id="swiper-button-next2"> <img src="Vectorright.svg" alt=""></div> 
+        <div class="swiper-button-prev swiper-button-prev2" id="swiper-button-prev2"> <img src="nuevo left.svg"alt=""></div> 
     </div>
 
 
 
 
 
-    <p class="movie-genre">Movies by genre</p>
+    <p class="movie-genre" id="movie-genre-tab">Movies by genre</p>
    <div class="genre">
        <!-- Reliez les bouton par genre de recherche dans le JS -->
         <button class="comedy">Comedy</button>
@@ -102,7 +107,7 @@
     <div class="ligne"></div>
     
         <div class="swiper-container swiper-container3">
-            <p>Showing now: <span id="text-result-genre"> Thriller</span></p>
+            <p class="text-section">Showing now: <span id="text-result-genre"> Thriller</span></p>
         <div class="swiper-wrapper" id="swiper-container-genre">
              <!-- a chaque nouvelle image crée une div qui reprend la même class et une balise img avec un FOR ou While
               et supprime a chaque nouveau CLICK -->
@@ -120,25 +125,26 @@
         </div>
 
         <!-- <div class="swiper-pagination"></div> -->
-        <div class="swiper-button-next swiper-button-next3"></div> 
-        <div class="swiper-button-prev swiper-button-prev3"></div> 
+        <div class="swiper-button-next swiper-button-next3" id="swiper-button-next3"> <img src="Vectorright.svg" alt="" id="imgnext1"></div> 
+        <div class="swiper-button-prev swiper-button-prev3" id="swiper-button-prev3"> <img src="nuevo left.svg" alt="" id="imgnext1"></div> 
     </div>
 
 
 
-
+    <footer>
     <div class="toolbarDown">
         <h4 class="toolTitreRightDown"><span class="colorSpan">BE</span>MOVIES</h4>
         <div class="tooldown">
-        <p>SEARCH</p>
-        <p>LATEST</p>
-        <p>GENRES</p>
-        <button id="registerBtnFooter">REGISTER</button>
+        <a href="#search-section">SEARCH</a>
+        <a href="#search-section">LATEST</a>
+        <a href="#movie-genre-tab">GENRES</a>
+        <a id="registerBtnFooter">REGISTER</a>
         <!-- rajouter lien Modale avec la class "connection-site2" a".formulaire-connection-modale-BGround" ( change display) -->
-        <button class="connection-site2">SIGNIN</button>
+        <a class="connection-site2">SIGNIN</a>
         </div>
-        <p class="copyrith">@2023 - All rights reserved</p>
+        <p class="copyrith">@2024 - All rights reserved</p>
     </div>
+</footer>
     
 
 
@@ -157,7 +163,7 @@
     </div>
         <div class="sign">
             
-       <p> SIGNUP </p>  </div> <div class="log"><p> LOGIN </p>
+       <p id="signuptext1"> SIGNUP </p>  </div> <div class="log"><p id="logintext1"> LOGIN </p>
     
        <input class="modaleInputUser" placeholder="UserName" type="text">
       
