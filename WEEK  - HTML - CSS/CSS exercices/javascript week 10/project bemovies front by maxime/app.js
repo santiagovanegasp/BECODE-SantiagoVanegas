@@ -1,10 +1,13 @@
 
     /////////  version 4  //////
     let swiper;
+    let hasResults; 
 
     document.addEventListener("DOMContentLoaded", function () {
       initializeSwiper();
     });
+
+
 
     function initializeSwiper() {
       swiper = new Swiper('.swiper-container', {
@@ -22,7 +25,8 @@
         // },  ?? on/off
         slidesPerView: 4,
       });
-    }
+    }; 
+
 
     // dom
     const inputSearchField = document.getElementsByClassName('inputRecherche')[0];
@@ -56,7 +60,8 @@
     console.log(searchCast(550));  ///test 
 
 
-    // Enter search 
+    // Enter search old version  
+
     inputSearchField.addEventListener('keydown', function(event) {
       const query = inputSearchField.value;
       const spanResults = document.getElementById('inputResult');
@@ -68,6 +73,13 @@
           console.log('Resultados de búsqueda:', results);
           spanResults.textContent = `"${query}"`;
           swiperContainer.style.display = 'block';
+          hasResults = results.length > 0; // Actualizar si hay resultados
+          if (!hasResults) {
+            console.warn('No se encontraron resultados.');
+            document.getElementById('swiper-container-search').innerHTML = '<p class="text-section">No results found</p>';
+            changeNavButtonsPosition ();
+            return;
+          }
           changeNavButtonsPosition ();
           // hoverCardPositon();
           // Destroy actual swiper
@@ -85,29 +97,54 @@
       }
     });
 
-    // click search 
-    searchButton.addEventListener('click', function() {
+    //_____________
+
+    
+
+    // test version 
+
+    // click search    old  version
+  
+    searchButton.addEventListener('click', async function() {
       const query = inputSearchField.value;
       const spanResults = document.getElementById('inputResult');
+      const swiperContainer = document.getElementById('swiper-container1');
+    
       if (query) {
-        console.log('Buscando:', query);
-          searchMovie(query).then(function(results) {
-          console.log('Resultados de búsqueda:', results);
-          spanResults.textContent = `"${query}"`;
-
-          // Destruye el swiper actual solo si existe y tiene la función destroy
-          if (swiper && typeof swiper.destroy === "function") {
-            swiper.destroy();
-          }
-          // Agregar un retraso antes de reinicializar el Swiper
+        const results = await searchMovie(query);
+    
+        hasResults = results.length > 0; // Actualizar si hay resultados
+        console.log('Resultados de búsqueda:', results);
+        spanResults.textContent = `"${query}"`;
+        swiperContainer.style.display = 'block';
+        changeNavButtonsPosition();
+    
+        // Si no hay resultados, limpiar el swiper
+        if (!hasResults) {
+          console.warn('No se encontraron resultados.');
+          document.getElementById('swiper-container-search').innerHTML = '<p class="text-section">No results found</p>';
+          return;
+        }
+    
+        if (swiper && typeof swiper.destroy === "function") {
+          swiper.destroy();
+        }
+    
         setTimeout(() => {
-        initializeSwiper();  // Reinicializa el swiper con las nuevas imágenes
-      }, 50); // Retraso 
-          showImages(results);
-        });
+          initializeSwiper();
+        }, 50); // Retraso
+        showImages(results);
       }
     });
+    
 
+    // 
+
+
+
+    //////////////// _______________ /////////////
+    
+    
   /// genres 
 
   // api url 
@@ -165,6 +202,7 @@
 
 
   /// function create images  input search 
+
 
   const showImages = async (results) => {
     const swiperContainer = document.getElementById('swiper-container-search'); 
@@ -239,8 +277,11 @@
 
       closeModal();
     }
-  };
+  };  
 
+ // test version showImages___
+
+// test version end 
   /// 
 
   function openModalWithMovieInfo(title, releaseDate, votesAverage, genres, overview, posterUrl, cast) {
@@ -423,14 +464,38 @@
           });
           closeModal();
         }
+        
       });
 
       // update swiper after content is created
       latestSwiper.update();
     } catch (error) {
       console.error("Error loading latest releases:", error);
-    }
+    } 
+
+    swiperbug ();
   };
+
+
+  /// bug correction // 
+  function swiperbug (){
+    // Destruir la instancia de Swiper existente
+if (latestSwiper) {
+  latestSwiper.destroy(true, true);  // true, true asegura que también se destruyan los eventos y estilos.
+}
+
+// Re-inicializar Swiper
+latestSwiper = new Swiper('.swiper-container2', {
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next2',
+    prevEl: '.swiper-button-prev2',
+  },
+  slidesPerView: 4,
+  spaceBetween: 20,
+});
+  };
+// ___________ // 
 
   loadLatestReleases()  
 
@@ -620,6 +685,7 @@
     } catch (error) {
       console.error("Error loading latest releases:", error);
     }
+    swiperbug ();
   };
 
   loadMoviesByGenre() ; 
@@ -647,16 +713,41 @@
     const swiperbuttonnext3 = document.getElementsByClassName('swiper-button-next3')[0];
     const swiperbuttonprev3 = document.getElementsByClassName('swiper-button-prev3 ')[0];
 
+    if (hasResults) {
+      // Posiciones cuando hay resultados
+      swiperbuttonnext2.style.transform = 'translateY(1000%)';
+      swiperbuttonprev2.style.transform = 'translateY(1300%)';
+      swiperbuttonnext3.style.transform = 'translateY(2700%)';
+      swiperbuttonprev3.style.transform = 'translateY(2700%)';
+    } else {
+      console.log('nothing to transform')
+      swiperbuttonnext2.style.transform = 'translateY(230%)';
+      swiperbuttonprev2.style.transform = 'translateY(508%)';
+      swiperbuttonnext3.style.transform = 'translateY(1900%)';
+      swiperbuttonprev3.style.transform = 'translateY(1900%)';
 
+      //swiper-button-next2 transform: translateY(230%); 
+
+      //  transform: translateY(1900%);
+
+
+    }
+
+    console.log( `status hasResults in changeNavButtonsPosition  ${hasResults}`)
+    /*
     swiperbuttonnext2.style.transform = 'translateY(1000%)';
     swiperbuttonprev2.style.transform = 'translateY(1300%)';
     swiperbuttonnext3.style.transform = 'translateY(2700%)';
     swiperbuttonprev3.style.transform = 'translateY(2700%)';
+
+    */
     
-  
-
-
   };
+
+  console.log( `status hasResults in global  ${hasResults}`)
+
+
+
 
   //  modal sing in log in // 
 
