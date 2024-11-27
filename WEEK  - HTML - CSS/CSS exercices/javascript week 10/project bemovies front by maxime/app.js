@@ -1,5 +1,5 @@
 
-    /////////  version 4  //////
+    /////////  version 5  //////
     let swiper;
     let hasResults; 
 
@@ -7,6 +7,15 @@
       initializeSwiper();
     });
 
+  //   const swiper = new Swiper('.mySwiper', {
+  //     slidesPerView: 4,        // 
+  //     spaceBetween: 3,        // 
+  //     navigation: {
+  //         nextEl: '.swiper-button-next',
+  //         prevEl: '.swiper-button-prev',
+  //     },
+  //     loop: true,              // infinite loop
+  // }) ; 
 
 
     function initializeSwiper() {
@@ -24,6 +33,7 @@
         //   delay: 3000,
         // },  ?? on/off
         slidesPerView: 4,
+        spaceBetween: 20,
       });
     }; 
 
@@ -89,7 +99,7 @@
           
           setTimeout(() => {
           initializeSwiper();  
-        }, 50); // delay to fix 
+        }, 100); // delay to fix 
           
           showImages(results);
 
@@ -192,11 +202,11 @@
           if (genre) {
             genreNames.push(genre.name);
           } else {
-            genreNames.push("Unknown"); // Si no encontramos el ID, ponemos "Unknown"
+            genreNames.push("Unknown"); // 
           }
         }
       
-        return genreNames; // Devolvemos el array de nombres de géneros
+        return genreNames; // Devolvemos el array 
       };
 
 
@@ -214,7 +224,7 @@
         const title = movie.original_title;
         const overview = movie.overview;
         const releaseDate = movie.release_date.split("-")[0];
-        const movieIdGenres = getGenreNamesByIds(movie.genre_ids).join('/');
+        const movieIdGenres = getGenreNamesByIds(movie.genre_ids).slice(0, 4).join('/');
         
         const votesAverage = movie.vote_average.toFixed(1);
         const movieId = movie.id;
@@ -473,7 +483,7 @@
       console.error("Error loading latest releases:", error);
     } 
 
-    swiperbug ();
+    swiperbug();
   };
 
 
@@ -585,7 +595,7 @@ latestSwiper = new Swiper('.swiper-container2', {
           prevEl: '.swiper-button-prev3',
       },
       slidesPerView: 4,
-      // spaceBetween: 20,
+      spaceBetween: 20,
   });
 
 
@@ -613,7 +623,7 @@ latestSwiper = new Swiper('.swiper-container2', {
           const title = movie.original_title;
           const overview = movie.overview;
           const releaseDate = movie.release_date.split("-")[0];
-          const movieIdGenres = getGenreNamesByIds(movie.genre_ids).join('/');
+          const movieIdGenres = getGenreNamesByIds(movie.genre_ids).slice(0, 4).join('/');
           const votesAverage = movie.vote_average.toFixed(1);
           const movieId = movie.id;
 
@@ -671,7 +681,7 @@ latestSwiper = new Swiper('.swiper-container2', {
               movie.original_title,
               movie.release_date.split("-")[0],
               movie.vote_average.toFixed(1),
-              getGenreNamesByIds(movie.genre_ids).join('/'),
+              getGenreNamesByIds(movie.genre_ids).slice(0, 4).join('/'),
               movie.overview,
               posterUrl,
               myCast
@@ -685,7 +695,7 @@ latestSwiper = new Swiper('.swiper-container2', {
     } catch (error) {
       console.error("Error loading latest releases:", error);
     }
-    swiperbug ();
+   swiperbug();
   };
 
   loadMoviesByGenre() ; 
@@ -723,8 +733,8 @@ latestSwiper = new Swiper('.swiper-container2', {
       console.log('nothing to transform')
       swiperbuttonnext2.style.transform = 'translateY(230%)';
       swiperbuttonprev2.style.transform = 'translateY(508%)';
-      swiperbuttonnext3.style.transform = 'translateY(1900%)';
-      swiperbuttonprev3.style.transform = 'translateY(1900%)';
+      swiperbuttonnext3.style.transform = 'translateY(1950%)';
+      swiperbuttonprev3.style.transform = 'translateY(1950%)';
 
       //swiper-button-next2 transform: translateY(230%); 
 

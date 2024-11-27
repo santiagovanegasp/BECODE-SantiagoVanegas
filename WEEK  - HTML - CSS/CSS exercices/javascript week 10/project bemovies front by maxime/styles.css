@@ -135,8 +135,10 @@ color: aliceblue;
 
 .swiper-slide img {
     cursor: pointer;
-    width: 234px;
-    height: 351px;
+    /* width: 234px;
+    height: 351px; */
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     display: block;
     object-fit: cover;
@@ -329,13 +331,13 @@ color: aliceblue;
    }
    .swiper-button-next3 {
        right: 10px; 
-       transform: translateY(1900%);
+       transform: translateY(1850%);
        /*2650*/
    }
    
    .swiper-button-prev3 {
     
-       transform: translateY(1900%);
+       transform: translateY(1850%);
    }
  /* Swiper3 --------------------FIN------------------------- */
 /* Toolbar(footer)-------------DEBUT-------------------------- */
@@ -709,10 +711,13 @@ display: block;
 .movie-info {
     position: absolute;
     top: 0;
-    left: 17px;
+    left: 0px;
+    /* left: 17px; */
     /* position full content 17px - 9px */ 
-    width: 235px;
-    height: 351px;
+    /* width: 235px;
+    height: 351px; */
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.815); /* Fondo semitransparente */
     /* color: #fff; */
     display: flex;
