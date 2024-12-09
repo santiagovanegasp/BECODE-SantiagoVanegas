@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Hachi+Maru+Pop&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+    margin: 0;
+    font-family: "Coming Soon", cursive;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .todo-container {
+    width: 90%;
+    max-width: 600px;
+    background: #ede0d4;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  
+
+    background-image: 
+      linear-gradient(to bottom, #e6ccb2 50%, transparent 50%), 
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px); 
+    background-size: 100% 60px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+ 
+  
+  }
+  
+  .todo-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .todo-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   
+  }
+  
+  .todo-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .todo-list li:last-child {
+    border-bottom: none;
+  }
+
+  .check{
+    color: rgb(50, 157, 50);
+    font-size: 24px;
+  }
+
+  .uncheck {
+    color: rgb(198, 58, 58);
+    font-size: 24px;
+  }
+
+
+  .searchBar{
+    width: 100%;
+    max-width: 300px;
+    min-height: 100%;
+}   
+
+
+.completedNum, .totalNum{
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.li{
+  display: inline-block;
+}
+
+.todo-item {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 8px; 
+  list-style: none; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  margin-bottom: 8px; 
+}
+
+.check, .uncheck {
+  cursor: pointer; 
+  padding: 4px 8px; 
+  background-color: #f0f0f0; 
+  border-radius: 4px; 
+}
+
+.todo-text {
+  flex-grow: 1;
+  margin: 0 8px; 
+}
+
+
+.todo-list li {
+  margin: 0; 
+  padding: 0px; 
+  font-size: 16px;
+  border-bottom: 1px solid #ddd; 
+}
+
+
+
+ul{
+  padding-inline-start: 0; 
+}
+
+.strikethrough-text{
+  text-decoration:line-through;
+  
+}

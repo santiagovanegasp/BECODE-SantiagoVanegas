@@ -1,0 +1,9 @@
+
+button{
+    background-color: rgb(119, 119, 197);
+    color: aliceblue;
+    border: solid 1px rgb(112, 112, 112);
+    padding: 4px 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
