@@ -3,17 +3,10 @@ import '../general.css';
 import { useLocalStorage } from './useLocalStorage';
 import { AppUI } from './AppUI'
 
-// import { CreateTodoButton } from '../CreateTodoButton';
-// import { TodoCounter } from '../TodoCounter';
-// import { TodoItem } from '../TodoItem';
-// import { TodoList } from '../TodoList';
-// import { TodoSearch } from '../TodoSearch';
-// import './general.css';
-
-
-
 
 // renderizar arrays 
+
+// localStorage.removeItem('TODOS_V1');
 
 // const defaultTodos = [
 //   { text: 'cooking' , completed: false},
@@ -27,15 +20,15 @@ import { AppUI } from './AppUI'
 // localStorage.setItem('TODOS_V1',JSON.stringify(defaultTodos) );
 
 
-/// hooks 
-
-
-
-
 function App() {
   
   // const [todos,setTodos]= React.useState(defaultTodos);
-  const [todos,saveTodos]= useLocalStorage('TODOS_V1', []);
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading,
+    error,
+  }= useLocalStorage('TODOS_V1', []);
 
   const [searchValue,setSearchValue] = React.useState('');
 
@@ -50,6 +43,23 @@ function App() {
     const searchText = searchValue.toLowerCase();
     return todoText.includes(searchText)
   } );
+
+console.log('log 1')
+
+// React.useEffect(() => {
+//   console.log('log 2')
+// })
+
+// React.useEffect(() => {
+//   console.log('loooooooog 2')
+// },[])
+
+React.useEffect(() => {
+  console.log('loooooooog 2')
+},[totalTodos])  // render on change 
+
+console.log('log 3')
+
 
  
 
@@ -74,15 +84,34 @@ function App() {
 
   return (
     <AppUI
-      completedTodos={completedTodos}
-      totalTodos={totalTodos}
-      searchValue={searchValue}
-      setSearchValue={setSearchValue}
-      searchedTodos={searchedTodos}
-      finishTodo={finishTodo}
-      deleteTodo={deleteTodo}
+    loading={loading}
+    error={error}
+    completedTodos={completedTodos}
+    totalTodos={totalTodos}
+    searchValue={searchValue}
+    setSearchValue={setSearchValue}
+    searchedTodos={searchedTodos}
+    finishTodo={finishTodo}
+    deleteTodo={deleteTodo}
     />
   )
 } ; 
 
 export default App;
+
+function TodoMessage () {
+  const [state,setState] = React.useState({});
+
+  React.useEffect(() => {
+    const data = api ();
+    setState(data);
+  }, []);
+
+  return (
+    <p>
+      {state.TodoMessage
+      || 'mi mensaje'}
+
+    </p>
+  )
+}

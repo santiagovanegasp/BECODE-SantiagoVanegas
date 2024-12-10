@@ -8,6 +8,8 @@ import { TodoSearch } from '../TodoSearch';
 
 
 function AppUI ({
+    loading,
+    error,
     completedTodos,
     totalTodos,
     searchValue,
@@ -28,6 +30,10 @@ function AppUI ({
             setSearchValue={setSearchValue}
             />
             <TodoList>
+              {loading && <p> cargando....</p>}
+              {error && <p> error....</p>}
+              {(!loading && searchedTodos.length === 0) && <p> write your fisrt todo</p> }
+
               {searchedTodos.map(todo => (
                 <TodoItem 
                 key={todo.text} 
