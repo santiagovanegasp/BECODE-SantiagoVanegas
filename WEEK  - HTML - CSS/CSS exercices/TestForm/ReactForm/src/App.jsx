@@ -6,7 +6,6 @@ function App() {
     LastName:"",
     email: "",
     age: "",
-    //
     phoneNumber:"",
     password:"",
     repeatPassword:"",
@@ -40,6 +39,7 @@ function App() {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const ageRegex = /^\d+$/;
   const phoneRegex = /^\d{9,10}$/;
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
   // Validar un campo individual
   const validateField = (name, value) => {
@@ -64,6 +64,21 @@ function App() {
       case "age":
         if (!ageRegex.test(value) || parseInt(value) <= 0) {
           errorMessage = "the age needs to be a positive number";
+        }
+        break;
+      case "phoneNumber":
+        if (!phoneRegex.test(value)) {
+          errorMessage = "please, write a valid phone number";
+        }
+        break;
+      case "password":
+        if (!passwordRegex.test(value)) {
+          errorMessage = "Your password must contain: At least 8 characters, 1 uppercase letter,1 lowercase letterm 1 number,1 special character  (e.g., @, $, !, %, *, ?, &).";
+        }
+        break;
+      case "repeatPassword":
+        if (value !== formData.password) {
+          errorMessage = "The password does not match";
         }
         break;
       default:
@@ -91,6 +106,19 @@ function App() {
     if (!ageRegex.test(formData.age) || parseInt(formData.age) <= 0) {
       newErrors.age = "the age needs to be a positive number";
     }
+    //
+    if (!namesRegex.test(formData.LastName)) {
+      newErrors.LastName = "The lastname can not contain numbers";
+    }
+    if (!phoneRegex.test(formData.phoneNumber)) {
+      newErrors.phoneNumber = "please, write a valid phone number";
+    }
+    if (!passwordRegex.test(formData.password)) {
+      newErrors.password = "Your password must contain: At least 8 characters, 1 uppercase letter,1 lowercase letterm 1 number,1 special character  (e.g., @, $, !, %, *, ?, &).";
+    }
+    if (formData.password !== formData.repeatPassword) {
+      newErrors.repeatPassword = "The password does not match";
+    }
 
     setErrors(newErrors);
 
@@ -113,18 +141,30 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Formulario de Registro</h1>
+    <div className="container-form">
+      <h1>My Cool Register Form</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>FirstName:</label>
+          <label>{errors.FirstName && <p style={{ color: "red" }}>{errors.FirstName}</p>}</label>
           <input
             type="text"
             name="FirstName"
             value={formData.FirstName}
             onChange={handleChange}
+            placeholder="FirstName"
           />
           {errors.FirstName && <p style={{ color: "red" }}>{errors.FirstName}</p>}
+        </div>
+        
+        <div>
+          <label>LastName:</label>
+          <input
+            type="text"
+            name="LastName"
+            value={formData.LastName}
+            onChange={handleChange}
+          />
+          {errors.LastName && <p style={{ color: "red" }}>{errors.LastName}</p>}
         </div>
 
         <div>
@@ -145,8 +185,42 @@ function App() {
             name="age"
             value={formData.age}
             onChange={handleChange}
+            
           />
           {errors.age && <p style={{ color: "red" }}>{errors.age}</p>}
+        </div>
+
+        <div>
+          <label>Phone Number:</label>
+          <input
+            type="text"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+          />
+          {errors.phoneNumber && <p style={{ color: "red" }}>{errors.phoneNumber}</p>}
+        </div>
+
+        <div>
+          <label>Password:</label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+          {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
+        </div>
+
+        <div>
+          <label>Repeat Password:</label>
+          <input
+            type="password"
+            name="repeatPassword"
+            value={formData.repeatPassword}
+            onChange={handleChange}
+          />
+          {errors.repeatPassword && <p style={{ color: "red" }}>{errors.repeatPassword}</p>}
         </div>
 
         <button type="submit">Registrar</button>
