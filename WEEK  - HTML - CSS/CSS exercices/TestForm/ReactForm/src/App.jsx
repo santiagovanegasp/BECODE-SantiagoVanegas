@@ -142,7 +142,7 @@ function App() {
 
   return (
     <div className="container-form">
-      <h1>My Cool Register Form</h1>
+      <h1>SIGN UP</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label>{errors.FirstName && <p style={{ color: "red" }}>{errors.FirstName}</p>}</label>
@@ -151,79 +151,85 @@ function App() {
             name="FirstName"
             value={formData.FirstName}
             onChange={handleChange}
-            placeholder="FirstName"
+            placeholder="First Name"
           />
-          {errors.FirstName && <p style={{ color: "red" }}>{errors.FirstName}</p>}
+          {/* {errors.FirstName && <p style={{ color: "red" }}>{errors.FirstName}</p>} */}
         </div>
         
         <div>
-          <label>LastName:</label>
+          <label>{errors.LastName && <p style={{ color: "red" }}>{errors.LastName}</p>}</label>
           <input
             type="text"
             name="LastName"
             value={formData.LastName}
             onChange={handleChange}
+            placeholder="Last Name"
           />
-          {errors.LastName && <p style={{ color: "red" }}>{errors.LastName}</p>}
+          {/* {errors.LastName && <p style={{ color: "red" }}>{errors.LastName}</p>} */}
         </div>
 
         <div>
-          <label>Email:</label>
+          <label>{errors.email && <p>{errors.email}</p>}</label>
           <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder="Email"
           />
-          {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+          {/* {errors.email && <p style={{ color: "red" }}>{errors.email}</p>} */}
         </div>
 
         <div>
-          <label>age:</label>
+          <label>{errors.age && <p>{errors.age}</p>}</label>
           <input
             type="text"
             name="age"
             value={formData.age}
             onChange={handleChange}
+            placeholder="Age"
             
           />
-          {errors.age && <p style={{ color: "red" }}>{errors.age}</p>}
+          {/* {errors.age && <p style={{ color: "red" }}>{errors.age}</p>} */}
         </div>
 
         <div>
-          <label>Phone Number:</label>
+          <label>{errors.phoneNumber && <p>{errors.phoneNumber}</p>}</label>
           <input
             type="text"
             name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
+            placeholder="Phone Number"
           />
-          {errors.phoneNumber && <p style={{ color: "red" }}>{errors.phoneNumber}</p>}
+          {/* {errors.phoneNumber && <p style={{ color: "red" }}>{errors.phoneNumber}</p>} */}
         </div>
 
         <div>
-          <label>Password:</label>
+          <label>{errors.password && <p>{errors.password}</p>}</label>
           <input
             type="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
+            placeholder="Password"
           />
-          {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
+          {/* {errors.password && <p style={{ color: "red" }}>{errors.password}</p>} */}
         </div>
 
         <div>
-          <label>Repeat Password:</label>
+          <label>{errors.repeatPassword && <p>{errors.repeatPassword}</p>}</label>
           <input
             type="password"
             name="repeatPassword"
             value={formData.repeatPassword}
             onChange={handleChange}
+            placeholder="Repeat Password"
           />
-          {errors.repeatPassword && <p style={{ color: "red" }}>{errors.repeatPassword}</p>}
+          {/* {errors.repeatPassword && <p style={{ color: "red" }}>{errors.repeatPassword}</p>} */}
         </div>
 
-        <button type="submit">Registrar</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
