@@ -1,9 +1,6 @@
 import './TodoCounter.css';
 
 
-
-
-
 function TodoCounter({total, completed}){
 
         if ( total === 0 ) {

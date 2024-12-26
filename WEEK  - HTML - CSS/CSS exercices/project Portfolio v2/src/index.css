@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flashlight {
+  position: fixed;
+  pointer-events: none;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at center, 
+    rgba(147, 51, 234, 0.15) 0%, 
+    transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+@layer components {
+  .nav-link {
+    @apply cursor-pointer hover:text-primary-light dark:hover:text-primary-dark transition-colors;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold mb-8 text-center;
+  }
+  
+  .tech-icon {
+    @apply w-16 h-16 mx-4 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110;
+  }
+}

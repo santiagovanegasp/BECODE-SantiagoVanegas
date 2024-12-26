@@ -30,7 +30,7 @@ function AppUI ({
             setSearchValue={setSearchValue}
             />
             <TodoList>
-              {loading && <p> cargando....</p>}
+              {loading && <p> Loading your todos....</p>}
               {error && <p> error....</p>}
               {(!loading && searchedTodos.length === 0) && <p> write your fisrt todo</p> }
 

@@ -11,7 +11,7 @@ function TodoSearch({
       className="searchBar"
       value={searchValue} 
       type="text" 
-      placeholder="cut onions"
+      placeholder="Search todos"
       onChange={(event)=> {
         setSearchValue(event.target.value);
       } } 
