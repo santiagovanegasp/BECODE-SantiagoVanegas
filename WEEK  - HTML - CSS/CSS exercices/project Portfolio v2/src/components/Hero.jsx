@@ -1,6 +1,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, } from 'react-icons/fa';
+// import { FaFiverr } from '@fortawesome/free-brands-svg-icons'; // Importa el ícono de Fiverr
 
 const Hero = () => {
   const roles = ['Developer', 'Designer', 'Creator'];
@@ -85,3 +86,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
