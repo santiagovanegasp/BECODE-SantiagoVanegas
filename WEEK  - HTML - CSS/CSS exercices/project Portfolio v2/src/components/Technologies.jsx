@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaSass, FaWordpress, FaGithub,FaGitAlt } from 'react-icons/fa';
+import { RiTailwindCssFill } from "react-icons/ri";
 
 const Technologies = () => {
   const technologies = [
     { icon: FaHtml5, name: 'HTML5' },
     { icon: FaCss3Alt, name: 'CSS3' },
+    { icon: RiTailwindCssFill, name: 'Tailwind' },
     { icon: FaJs, name: 'JavaScript' },
     { icon: FaReact, name: 'React' },
     { icon: FaNode, name: 'Node.js' },
