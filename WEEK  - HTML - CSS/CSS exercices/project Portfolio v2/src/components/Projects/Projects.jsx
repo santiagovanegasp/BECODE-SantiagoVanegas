@@ -95,7 +95,7 @@ const Projects = () => {
     {
       id: 1,
       title: "Corporate website",
-      shortDescription: "I created a web site for a friend, making the whole process",
+      shortDescription: " Real corporate website",
       longDescription: "I built this site for a friend who needed to renovate his previous website, for this project I had to do the whole process, from taking pictures and videos of some of his projects, creating the texts for the page optimized for SEO, to the design of the website. At my friend's request I kept elements from his previous site.",
       mainImage: "/projects/jardiniers1.png",
       images: [
@@ -137,7 +137,7 @@ const Projects = () => {
       ],
       technologies: ["React.js", "CSS"],
       liveDemo: "https://santiagovanegasp.github.io/react-form/",
-      github: "https://github.com/yourusername/ecommerce"
+      github: "https://github.com/santiagovanegasp/react-form"
     },
     {
       id: 4,
@@ -151,8 +151,8 @@ const Projects = () => {
         "/projects/bemovies3.png"
       ],
       technologies: ["Javascript", "CSS", "API REST"],
-      liveDemo: "https://example.com/taskapp",
-      github: "https://github.com/yourusername/taskapp"
+      liveDemo: "https://santiagovanegasp.github.io/bemovies-desktop-final-version/",
+      github: "https://github.com/santiagovanegasp/bemovies-desktop-final-version/"
     },
     {
       id: 5,
@@ -165,8 +165,8 @@ const Projects = () => {
         "/projects/landingpage2.png"
       ],
       technologies: ["Html", "CSS",],
-      liveDemo: "https://example.com/weather",
-      github: "https://github.com/yourusername/weather"
+      liveDemo: "https://santiagovanegasp.github.io/FINAL-CSS-Project/",
+      github: "https://github.com/santiagovanegasp/FINAL-CSS-Project"
     },
     {
       id: 6,
@@ -180,10 +180,10 @@ const Projects = () => {
         "/projects/ohhlala3.png"
       ],
       technologies: ["WordPress", "CSS"],
-      liveDemo: "https://santiagovanegasp.github.io/react-form/",
+      liveDemo: "https://ohhlala.net/",
       github: ""
     },
-    // ... otros proyectos
+    
   ];
 
   // Variantes para animaciones

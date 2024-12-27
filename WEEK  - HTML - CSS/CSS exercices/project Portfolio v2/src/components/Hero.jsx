@@ -1,6 +1,7 @@
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, } from 'react-icons/fa';
+import { TbBrandFiverr } from "react-icons/tb";
 // import { FaFiverr } from '@fortawesome/free-brands-svg-icons'; // Importa el ícono de Fiverr
 
 const Hero = () => {
@@ -62,7 +63,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="text-2xl hover:text-primary-light dark:hover:text-primary-dark"
               >
-                <FaTwitter />
+                <TbBrandFiverr />
               </motion.a>
             </div>
           </motion.div>

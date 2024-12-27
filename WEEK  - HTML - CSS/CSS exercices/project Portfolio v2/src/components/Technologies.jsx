@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaSass } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNode, FaSass, FaWordpress, FaGithub,FaGitAlt } from 'react-icons/fa';
 
 const Technologies = () => {
   const technologies = [
@@ -9,6 +9,10 @@ const Technologies = () => {
     { icon: FaReact, name: 'React' },
     { icon: FaNode, name: 'Node.js' },
     { icon: FaSass, name: 'Sass' },
+    { icon: FaGithub  , name: 'Github' },
+    { icon: FaGitAlt  , name: 'Git' },
+    { icon: FaWordpress, name: 'Wordpress' },
+    // { icon: FaSquareGit, name: 'Git' },
   ];
 
   return (

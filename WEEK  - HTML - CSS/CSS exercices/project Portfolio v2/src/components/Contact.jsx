@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
+import { emailConfig } from '../config/emailsjs.config';
 
 const Contact = () => {
   const formRef = useRef();
@@ -10,12 +11,19 @@ const Contact = () => {
     e.preventDefault();
     setStatus('sending');
 
+    const templateParams = {
+      to_email: emailConfig.toEmail,
+      from_name: formRef.current.name.value,
+      from_email: formRef.current.email.value,
+      message: formRef.current.message.value,
+    };
+
     emailjs
-      .sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        formRef.current,
-        'YOUR_PUBLIC_KEY'
+      .send(
+        emailConfig.serviceId,
+        emailConfig.templateId,
+        templateParams,
+        emailConfig.publicKey
       )
       .then(
         () => {
@@ -78,7 +86,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={status === 'sending'}
-            className="w-full bg-primary-light dark:bg-primary-dark text-white py-2 px-4 rounded hover:opacity-90 transition-opacity"
+            className="w-full bg-primary-light dark:bg-primary-dark text-white py-2 px-4 rounded hover:opacity-90 transition-opacity disabled:opacity-50"
           >
             {status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>

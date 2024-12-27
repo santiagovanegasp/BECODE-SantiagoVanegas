@@ -20,7 +20,7 @@ const ProjectCard = ({ project, onClick }) => {
             <span
               key={tech}
               className="px-3 py-1 bg-primary-light/10 dark:bg-primary-dark/10 
-                       text-primary-light dark:text-primary-dark rounded-full text-sm"
+                       text-primary-light dark:text-[rgb(228,204,251)] rounded-full text-sm"
             >
               {tech}
             </span>

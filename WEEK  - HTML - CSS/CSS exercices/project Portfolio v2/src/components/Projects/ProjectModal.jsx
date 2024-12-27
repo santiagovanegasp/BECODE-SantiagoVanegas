@@ -79,7 +79,7 @@ const ProjectModal = ({ project, onClose }) => {
               <span
                 key={tech}
                 className="px-2.5 py-0.5 bg-primary-light/10 dark:bg-primary-dark/10 
-                         text-primary-light dark:text-primary-dark rounded-full text-xs"
+                         text-primary-light dark:text-[rgb(228,204,251)] rounded-full text-sm"
               >
                 {tech}
               </span>

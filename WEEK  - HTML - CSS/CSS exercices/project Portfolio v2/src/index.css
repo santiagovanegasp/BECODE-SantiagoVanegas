@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-light dark:bg-primary-dark rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-light/80 dark:bg-primary-dark/80;
+}
+
 .flashlight {
   position: fixed;
   pointer-events: none;
