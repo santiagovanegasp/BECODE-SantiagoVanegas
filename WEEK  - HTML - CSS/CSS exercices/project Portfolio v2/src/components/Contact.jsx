@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="contact" className="py-20 ">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Get in Touch</h2>
         <motion.form

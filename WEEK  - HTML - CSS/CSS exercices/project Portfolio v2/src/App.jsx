@@ -21,11 +21,14 @@ function App() {
         />
       )}
       <Navbar />
-      <Hero />
+      <div className="bg-grid-dots">
+        <Hero />
+      
       <Projects />
       <About />
       <Technologies />
       <Contact />
+      </div>
     </div>
   );
 }

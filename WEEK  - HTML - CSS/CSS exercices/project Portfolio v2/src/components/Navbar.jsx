@@ -22,13 +22,15 @@ const Navbar = () => {
           <div className="flex items-center flex-shrink-0">
             
             <img 
-              src="./public/images/logo.png" 
+              src="/images/logo.png"
+              // src="./public/images/logo.png"  
               alt="Santi Dev Logo Light"
               className="h-8 w-8 mr-2 dark:hidden"
             /> 
     
             <img
-              src="./public/images/logodark.png" 
+              // src="./public/images/logodark.png" 
+              src="/images/logodark.png" 
               alt="Santi Dev Logo Dark"
               className="h-8 w-8 mr-2 hidden dark:block"
             />

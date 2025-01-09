@@ -58,7 +58,7 @@ const Hero = () => {
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                href="https://www.fiverr.com/santiagovanegap"
+                href="https://www.fiverr.com/tiagowebsites"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl hover:text-primary-light dark:hover:text-primary-dark"
@@ -74,9 +74,11 @@ const Hero = () => {
             className="relative"
           >
             <div className="w-64 h-64 md:w-96 md:h-96 mx-auto rounded-full overflow-hidden">
-              {/* Replace with your photo */}
+              {/* testing photo */}
               <div className="w-full h-full bg-primary-light/20 dark:bg-primary-dark/20 flex items-center justify-center text-lg">
-                <img src="./public/images/profile.avif" alt="" />
+                {/* <img src="./public/images/profile.avif" alt="" /> */}
+                <img src="./public/images/perfil.png" alt="" />
+                {/* <img src="/images/profile.avif" alt="" /> */}
               </div>
             </div>
           </motion.div>

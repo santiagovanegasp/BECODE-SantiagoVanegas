@@ -8,7 +8,7 @@ const About = () => {
   });
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="py-20 ">
       <div className="container mx-auto px-4">
         <h2 className="section-title">About Me</h2>
         <motion.div
@@ -26,7 +26,7 @@ const About = () => {
           </p>
         
           <p className="text-lg">
-          I am looking for remote or on-site job that offer visa sponsorship.
+          I'm open to freelance opportunities, remote or on site jobs that offer visa sponsorship.
           </p>
         </motion.div>
       </div>

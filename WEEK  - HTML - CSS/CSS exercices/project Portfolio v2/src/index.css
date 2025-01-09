@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Dot Grid Background */
+.bg-grid-dots {
+  background-image: radial-gradient(circle at 1px 1px, rgba(118, 123, 129, 0.3) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.dark .bg-grid-dots {
+  background-image: radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.1) 1px, transparent 0);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
